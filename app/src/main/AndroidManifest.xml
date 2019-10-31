@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.conscot">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/amarillo">
+        <activity
+            android:name=".Menuslide"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_menuslide"
+            android:theme="@style/amarillo"></activity>
+        <activity android:name=".registro"
+            android:screenOrientation="portrait" />
+        <activity android:name=".recuperar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inicio"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

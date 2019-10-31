@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/azuldegradado"
+    tools:context=".recuperar">
+
+    <ImageView
+        android:layout_width="223dp"
+        android:layout_height="173dp"
+        android:src="@drawable/conscotlogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.213" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="356dp"
+        android:layout_height="59dp"
+        android:background="@drawable/texto"
+        android:drawableLeft="@drawable/email"
+        android:fontFamily="@font/comfortaa"
+        android:hint="Correo electronico"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="#A49E9E"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <Button
+        android:layout_width="310dp"
+        android:layout_height="36dp"
+        android:background="@drawable/botones"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="Recuperar contraseña"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText1"
+        app:layout_constraintVertical_bias="0.115"
+        />
+    "
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
