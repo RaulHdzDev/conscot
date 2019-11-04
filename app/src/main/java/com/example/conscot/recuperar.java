@@ -36,7 +36,9 @@ import javax.mail.Message;
 
 public class recuperar extends AppCompatActivity {
 
-    String correor="arkteam.help@gmail.com", contrasena="A19r73K93", conR;//declarar correo y contraseña
+    String correor="arkteam.help@gmail.com", contrasena="A19r73K93";
+    //String correor="conscot.help@gmail.com", contrasena="c0n$c0T2k20";
+    String conR;//declarar correo y contraseña
     Button Recuperar;
 
     EditText email;
