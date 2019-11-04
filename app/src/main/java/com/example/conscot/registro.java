@@ -236,8 +236,7 @@ public class registro extends AppCompatActivity {
         //Este método obtiene todos los registros de la tabla usuarios para verificar
         public void ejecutarConsulta() {
             try {
-                String arreglo[];
-                String linea;
+
                 String SQL = "SELECT Usuario, Correo, Telefono FROM Usuarios;";
 
                 Statement st = conexion.createStatement();
