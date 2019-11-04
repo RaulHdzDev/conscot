@@ -22,13 +22,15 @@
 
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/etNombreReg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/persona"
         android:fontFamily="@font/comfortaa"
         android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:maxLines="1"
         android:padding="10dp"
         android:textAlignment="center"
         android:textColor="#A49E9E"
@@ -38,14 +40,11 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321"
-        android:maxLines="1"
-        android:inputType="textPersonName"
-        />
+        app:layout_constraintVertical_bias="0.321" />
 
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/etApellidoReg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
@@ -67,7 +66,7 @@
         />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/etUsuarioReg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
@@ -89,7 +88,7 @@
         />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/etCorreoReg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
@@ -112,7 +111,7 @@
 
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/etTelefonoReg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
@@ -135,7 +134,7 @@
 
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/etContrasenaReg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
@@ -157,7 +156,7 @@
         />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/etContrasena2Reg"
         android:layout_width="356dp"
         android:layout_height="59dp"
         android:background="@drawable/texto"
@@ -179,6 +178,7 @@
         />
 
     <Button
+        android:id="@+id/btnRegistrar"
         android:layout_width="279dp"
         android:layout_height="31dp"
         android:background="@drawable/botones"
@@ -190,8 +190,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9"
-        /> "
+        app:layout_constraintTop_toBottomOf="@+id/etContrasena2Reg" /> "
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
