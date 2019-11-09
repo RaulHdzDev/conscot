@@ -24,7 +24,7 @@
     <EditText
         android:id="@+id/etNombreReg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/persona"
         android:fontFamily="@font/comfortaa"
@@ -46,7 +46,7 @@
     <EditText
         android:id="@+id/etApellidoReg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/persona"
         android:fontFamily="@font/comfortaa"
@@ -68,7 +68,7 @@
     <EditText
         android:id="@+id/etUsuarioReg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/nick"
         android:fontFamily="@font/comfortaa"
@@ -90,7 +90,7 @@
     <EditText
         android:id="@+id/etCorreoReg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/email"
         android:fontFamily="@font/comfortaa"
@@ -113,7 +113,7 @@
     <EditText
         android:id="@+id/etTelefonoReg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/telefono"
         android:fontFamily="@font/comfortaa"
@@ -129,14 +129,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.717"
         android:maxLines="1"
-        android:inputType="numberPassword"
+        android:inputType="number"
         />
 
 
     <EditText
         android:id="@+id/etContrasenaReg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/pasword"
         android:fontFamily="@font/comfortaa"
@@ -158,7 +158,7 @@
     <EditText
         android:id="@+id/etContrasena2Reg"
         android:layout_width="356dp"
-        android:layout_height="59dp"
+        android:layout_height="50dp"
         android:background="@drawable/texto"
         android:drawableLeft="@drawable/pasword"
         android:fontFamily="@font/comfortaa"

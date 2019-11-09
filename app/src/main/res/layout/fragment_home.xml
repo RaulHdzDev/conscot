@@ -45,17 +45,100 @@
 
 
     <ImageView
-        android:layout_width="435dp"
-        android:layout_height="278dp"
+        android:id="@+id/imageView5"
+        android:layout_width="336dp"
+        android:layout_height="202dp"
         android:layout_gravity="center"
-        android:src="@drawable/casa3"
+        android:src="@drawable/casa1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108"
+        app:layout_constraintVertical_bias="0.108" />
 
-        />
+    <TextView
+        android:id="@+id/constructora"
+        android:gravity="center"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
+        android:background="@drawable/amarillo"
+        android:fontFamily="@font/comfortaa_bold"
+        android:text="Constructoras             "
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/tareas"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
+        android:background="@drawable/amarillo"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center"
+        android:text="Tareas                         "
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constructora"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/planos"
+        android:layout_width="340dp"
+        android:layout_height="83dp"
+        android:background="@drawable/amarillo"
+        android:fontFamily="@font/comfortaa_bold"
+        android:gravity="center"
+        android:text="Planos 2D                  "
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tareas"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="64dp"
+        android:layout_height="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constructora"
+        app:layout_constraintEnd_toEndOf="@+id/constructora"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="@+id/constructora"
+        app:layout_constraintTop_toTopOf="@+id/constructora"
+        app:layout_constraintVertical_bias="0.555"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="55dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tareas"
+        app:layout_constraintEnd_toEndOf="@+id/tareas"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="@+id/tareas"
+        app:layout_constraintTop_toTopOf="@+id/tareas"
+        app:layout_constraintVertical_bias="0.473"
+        app:srcCompat="@drawable/tarea" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="73dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/planos"
+        app:layout_constraintEnd_toEndOf="@+id/planos"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="@+id/planos"
+        app:layout_constraintTop_toTopOf="@+id/planos"
+        app:layout_constraintVertical_bias="0.48"
+        app:srcCompat="@drawable/plano" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
