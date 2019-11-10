@@ -22,6 +22,7 @@
     <TextView
         android:layout_width="294dp"
         android:layout_height="33dp"
+
         android:fontFamily="@font/comfortaa_bold"
         android:text=" Crear Nueva nota:"
         android:textSize="16dp"
