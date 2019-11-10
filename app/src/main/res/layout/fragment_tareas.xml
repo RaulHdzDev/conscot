@@ -23,7 +23,7 @@
         android:layout_width="294dp"
         android:layout_height="33dp"
         android:fontFamily="@font/comfortaa_bold"
-        android:text="Nueva nota:"
+        android:text=" Crear Nueva nota:"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
