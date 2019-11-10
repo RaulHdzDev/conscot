@@ -22,8 +22,9 @@
     <TextView
         android:layout_width="294dp"
         android:layout_height="33dp"
+
         android:fontFamily="@font/comfortaa_bold"
-        android:text="Crear una nueva nota:"
+        android:text=" Crear Nueva nota:"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +69,8 @@
         android:layout_height="343dp"
         android:background="@drawable/transtarea"
         android:hint="Escribir nota"
-        android:textAlignment=""
+        android:textAlignment="viewStart"
+        android:padding="15dp"
         android:textColorHint="#000"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
