@@ -17,37 +17,26 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="154dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="110dp"
+                    android:layout_height="136dp"
                     android:background="#3e3e3e"
                     android:orientation="vertical">
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/btn_slide"
-                        android:drawableLeft="@drawable/busco"
-                        android:fontFamily="@font/comfortaa"
-                        android:hint="Buscar"
-                        android:paddingStart="15dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:textCursorDrawable="@color/colorPrimary"
-                        android:textSize="20dp" />
-
                     <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/blanco_header" />
+                        android:id="@+id/logo_header"
+                        android:layout_width="110dp"
+                        android:layout_height="84dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/conscotlogo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.093" />
 
 
                 </LinearLayout>
@@ -103,6 +92,7 @@
                                         android:orientation="horizontal">
 
                                         <FrameLayout
+
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:layout_margin="10dp">
@@ -143,6 +133,7 @@
                                                 android:orientation="vertical">
 
                                                 <Button
+                                                    android:id="@+id/btAceros"
                                                     android:layout_width="90dp"
                                                     android:layout_height="90dp"
                                                     android:background="@drawable/img_aceros" />
@@ -172,6 +163,7 @@
                                                 android:orientation="vertical">
 
                                                 <Button
+                                                    android:id="@+id/btAcabados"
                                                     android:layout_width="90dp"
                                                     android:layout_height="90dp"
                                                     android:background="@drawable/img_acabados" />
@@ -218,6 +210,7 @@
                                                 android:orientation="vertical">
 
                                                 <Button
+                                                    android:id="@+id/btPromeria"
                                                     android:layout_width="90dp"
                                                     android:layout_height="90dp"
                                                     android:background="@drawable/img_plomeria" />
@@ -247,6 +240,7 @@
                                                 android:orientation="vertical">
 
                                                 <Button
+                                                    android:id="@+id/btFerreteria"
                                                     android:layout_width="90dp"
                                                     android:layout_height="90dp"
                                                     android:background="@drawable/img_ferreteria" />
@@ -276,6 +270,7 @@
                                                 android:orientation="vertical">
 
                                                 <Button
+                                                    android:id="@+id/Electricos"
                                                     android:layout_width="90dp"
                                                     android:layout_height="90dp"
                                                     android:background="@drawable/img_elect" />
@@ -323,6 +318,7 @@
                                                 android:orientation="vertical">
 
                                                 <Button
+                                                    android:id="@+id/btOtros"
                                                     android:layout_width="90dp"
                                                     android:layout_height="90dp"
                                                     android:background="@drawable/img_construction" />
