@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
 
     <TextView
@@ -65,12 +66,13 @@
 
 
     <EditText
+        android:id="@+id/editText2"
         android:layout_width="361dp"
         android:layout_height="343dp"
         android:background="@drawable/transtarea"
         android:hint="Escribir nota"
-        android:textAlignment="viewStart"
         android:padding="15dp"
+        android:textAlignment="viewStart"
         android:textColorHint="#000"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,6 +80,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text_slideshow"
         app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/guardar"
+        android:layout_width="148dp"
+        android:layout_height="48dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
