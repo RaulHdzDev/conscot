@@ -1,28 +1,24 @@
 package com.example.conscot;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.conscot.ui.Conexion;
-import com.example.conscot.ui.home.HomeFragment;
 import com.example.conscot.ui.Usuarios;
 
 import java.lang.ref.WeakReference;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
 import java.sql.Statement;
 
 public class inicio extends AppCompatActivity {
@@ -38,7 +34,10 @@ public class inicio extends AppCompatActivity {
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                iniciarSesion();
+                Intent  intent = new Intent(view.getContext(), Menuslide.class);
+                view.getContext().startActivity(intent);
+                //iniciarSesion();
+
             }
         });
 

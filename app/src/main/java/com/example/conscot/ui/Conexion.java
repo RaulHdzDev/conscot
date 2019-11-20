@@ -1,7 +1,6 @@
 package com.example.conscot.ui;
 
 import android.os.StrictMode;
-import android.util.Log;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
