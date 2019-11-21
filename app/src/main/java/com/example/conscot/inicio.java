@@ -15,7 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.conscot.ui.Conexion;
 import com.example.conscot.ui.Usuarios;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.net.SocketAddress;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -37,7 +41,6 @@ public class inicio extends AppCompatActivity {
                 Intent  intent = new Intent(view.getContext(), Menuslide.class);
                 view.getContext().startActivity(intent);
                 //iniciarSesion();
-
             }
         });
 
@@ -81,9 +84,33 @@ public class inicio extends AppCompatActivity {
             return;
         }
 
+        //Verifica que el telefono tenga conexión a internet
+        if (!isOnline()){
+            Toast.makeText(this, "Verifique su conexión a internet", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //Instancia de la clase para hacer el login en background
         new HacerEnBack(this).execute(usuarioStr, contrasenaStr);
 
+    }
+
+    //Método para verificar la conexión a internet
+    public boolean isOnline() {
+        //Obtiene el runtime del dispositivo
+        Runtime runtime = Runtime.getRuntime();
+        try {
+            //Ejecuta un ping al servidor DNS de Google
+            Process ipProcess = runtime.exec("/system/bin/ping -c 1 8.8.8.8");
+            //Guarda el valor de la espera del ping
+            int exitValue = ipProcess.waitFor();
+            //Retorna si obtuvo respuesta
+            return (exitValue == 0);
+        }
+        catch (Exception e){
+        }
+        //Retorno en caso de aparecer una excepcion
+        return false;
     }
 
     //Clase interna para hacer las operaciones en background y así no se vean reflejadas en el
