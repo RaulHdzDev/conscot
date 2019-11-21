@@ -22,6 +22,10 @@ import java.util.ArrayList;
 
 public class productos_fragment extends Fragment {
 
+    //Variable estática en la que se va a guardar el valor de la categoría que se seleccionó en el
+    //fragment anterior
+    public static String categoriaSeleccionada = null;
+
     private Connection conexion;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -56,7 +60,7 @@ public class productos_fragment extends Fragment {
             String categoria="Cemento";
             String SQL = "select Producto,Precio from Productos\n" +
                     "inner join tipo on Productos.id_sub_tipo=tipo.id_tipo\n" +
-                    "where tipo.tipo='"+categoria+"';";
+                    "where tipo.tipo='"+categoriaSeleccionada+"';";
             Statement st = conexion.createStatement();
             ResultSet rs = st.executeQuery(SQL);
             while (rs.next()) {

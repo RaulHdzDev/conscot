@@ -23,6 +23,10 @@ public class categorias_fragment extends Fragment {
         aceros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Aceros";
+
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();
@@ -36,6 +40,10 @@ public class categorias_fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //aqui antes de que se cambie el fragment mandar que categoria se presiono
+
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Cemento";
+
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();
