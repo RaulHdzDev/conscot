@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 public class fragment_tareas extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_nuevatarea, container, false);
+        View root = inflater.inflate(R.layout.fragment_tareas, container, false);
 
         return root;
     }

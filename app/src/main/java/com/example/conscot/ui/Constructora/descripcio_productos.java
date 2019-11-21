@@ -1,4 +1,4 @@
-package com.example.conscot;
+package com.example.conscot.ui.Constructora;
 
 public class descripcio_productos {
     String precio,caracteristicas;

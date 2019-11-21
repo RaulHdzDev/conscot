@@ -50,23 +50,10 @@ public class SlideshowFragment extends Fragment {
         tareas_adapter adapter=new tareas_adapter(listaTareas);
         recyclertareas.setAdapter(adapter);
 
-
-        View root = inflater.inflate(R.layout.fragment_tareas, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         Button guardar = root.findViewById(R.id.guardar);
-        guardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
         return root;
     }
+
 
     private void llenarlista() {
         try {
