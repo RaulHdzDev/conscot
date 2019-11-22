@@ -9,8 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.conscot.ui.Conexion;
-import com.example.conscot.ui.Recuperacion;
+import com.example.conscot.Utilities.Conexion;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

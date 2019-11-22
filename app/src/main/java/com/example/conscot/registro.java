@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.conscot.ui.Conexion;
-import com.example.conscot.ui.Usuarios;
+import com.example.conscot.Utilities.Conexion;
+import com.example.conscot.Utilities.Usuarios;
 
 import java.lang.ref.WeakReference;
 import java.sql.Connection;

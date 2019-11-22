@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,14 +12,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.conscot.ui.Conexion;
-import com.example.conscot.ui.Usuarios;
+import com.example.conscot.Utilities.Conexion;
+import com.example.conscot.Utilities.SaveSharedPreference;
+import com.example.conscot.Utilities.Usuarios;
 
-import java.io.IOException;
 import java.lang.ref.WeakReference;
-import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketAddress;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -48,11 +44,11 @@ public class inicio extends AppCompatActivity {
         });
 
         //Verifica que no haya una sesión iniciada
-        /*if(SaveSharedPreference.getLoggedStatus(getApplicationContext())) {
-            Intent intent = new Intent(getApplicationContext(), inicio_activity.class);
+        if(SaveSharedPreference.getLoggedStatus(getApplicationContext())) {
+            Intent intent = new Intent(getApplicationContext(), Menuslide.class);
             startActivity(intent);
             finish();
-        }*/
+        }
 
     }
 
@@ -123,6 +119,10 @@ public class inicio extends AppCompatActivity {
         private WeakReference<Context> context;
         //Para establecer una conexión con la BD
         private Connection conexion = null;
+
+        private String usuario = null;
+        private String correo = null;
+
         //Constructor de la clase
         public HacerEnBack(Context context){
             this.context = new WeakReference<>(context);
@@ -173,6 +173,8 @@ public class inicio extends AppCompatActivity {
                 while (rs.next()) {
                     //Se guarda el resultado
                     user = new Usuarios(rs.getString("Usuario"), rs.getString("Contraseña"));
+                    this.usuario = rs.getString("Usuario");
+                    this.correo = rs.getString("Correo");
                 }
                 //Se cierran conexiones
                 rs.close();
@@ -195,7 +197,8 @@ public class inicio extends AppCompatActivity {
                     break;
                 case "C":
                     //Establece que se ha iniciado una sesión y debe mantenerla abierta
-                    /*SaveSharedPreference.setLoggedIn(context.get(), true);*/
+                    //Guarda el valor del usuario y correo del usuario loggeado
+                    SaveSharedPreference.setPreferences(context.get(), true, usuario, correo);
                     //Login exitoso -> pasa a la pantalla de inicio y cierra la actual
                     Intent  intent = new Intent(context.get(), Menuslide.class);
                     context.get().startActivity(intent);
