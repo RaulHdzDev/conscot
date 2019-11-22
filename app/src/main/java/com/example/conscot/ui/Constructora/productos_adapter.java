@@ -24,7 +24,6 @@ import java.util.zip.Inflater;
 
 
 public class productos_adapter extends RecyclerView.Adapter<productos_adapter.TareasViewHolder> {
-    static ArrayList<descripcio_productos_dialog> productos_seleccionados= new ArrayList<>();
     ArrayList<descripcio_productos> lista_productos;
 
     public productos_adapter(ArrayList<descripcio_productos> listaProductos) {
@@ -55,8 +54,16 @@ public class productos_adapter extends RecyclerView.Adapter<productos_adapter.Ta
                         .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                productos_seleccionados.add(new descripcio_productos_dialog(lista_productos.get(position).getPrecio()
-                                ,lista_productos.get(position).getCaracteristicas(),Integer.parseInt(Cantidad.getText().toString())));
+                                if (Integer.parseInt(Cantidad.getText().toString())!=0) {
+                                    productos_fragment.productos_seleccionados.add(new descripcio_productos_dialog(lista_productos.get(position).getPrecio()
+                                            , lista_productos.get(position).getCaracteristicas(), Integer.parseInt(Cantidad.getText().toString())));
+                                    Toast.makeText(build.getContext(), "Se añadio", Toast.LENGTH_LONG
+                                    ).show();
+                                   productos_fragment.Conscot.setEnabled(true);
+                                }else{
+                                    dialog.dismiss();
+
+                                }
                             }
                         }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override

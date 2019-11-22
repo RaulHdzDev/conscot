@@ -57,7 +57,6 @@ public class SlideshowFragment extends Fragment {
 
     private void llenarlista() {
         try {
-
             String SQL = "SELECT Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea FROM Tareas_usuarios;";
 
             Statement st = new Conexion().conexion().createStatement();

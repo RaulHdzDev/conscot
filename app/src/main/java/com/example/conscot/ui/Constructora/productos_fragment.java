@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,15 +29,32 @@ public class productos_fragment extends Fragment {
 
     //Variable estática en la que se va a guardar el valor de la categoría que se seleccionó en el
     //fragment anterior
+    static ArrayList<descripcio_productos_dialog> productos_seleccionados=new ArrayList<>();
     public static String categoriaSeleccionada = null;
     public static String Constructora_seleccionada=null;
+    static FloatingActionButton Conscot;
     private Connection conexion;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_cat_product, container, false);
         conexion=new Conexion().conexion();
         final RecyclerView lista_productos = root.findViewById(R.id.Lista_productos);
-        FloatingActionButton Conscot = root.findViewById(R.id.Cotizar);
+        //Regresa a categorias
+
+        TextView regresar=root.findViewById(R.id.Regresar_a_categorias);
+        regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                categorias_fragment categorias = new categorias_fragment();
+                fragmentTransaction.replace(R.id.container_home, categorias);
+                fragmentTransaction.commit();
+            }
+        });
+       Conscot = root.findViewById(R.id.Cotizar);
+       Conscot.setEnabled(false);
         Conscot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
