@@ -11,6 +11,17 @@
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Cotizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="600dp"
+            android:foreground="@drawable/conscotlogo"
+            app:backgroundTint="@color/colorPrimary">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

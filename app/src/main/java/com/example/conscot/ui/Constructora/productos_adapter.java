@@ -24,7 +24,7 @@ import java.util.zip.Inflater;
 
 
 public class productos_adapter extends RecyclerView.Adapter<productos_adapter.TareasViewHolder> {
-    ArrayList<descripcio_productos_dialog> productos_seleccionados= new ArrayList<>();
+    static ArrayList<descripcio_productos_dialog> productos_seleccionados= new ArrayList<>();
     ArrayList<descripcio_productos> lista_productos;
 
     public productos_adapter(ArrayList<descripcio_productos> listaProductos) {
@@ -40,7 +40,7 @@ public class productos_adapter extends RecyclerView.Adapter<productos_adapter.Ta
     @Override
     public void onBindViewHolder(@NonNull TareasViewHolder holder, final int position) {
         holder.Descripcion.setText(lista_productos.get(position).getCaracteristicas());
-        holder.precio.setText(lista_productos.get(position).getPrecio());
+        holder.precio.setText("$"+lista_productos.get(position).getPrecio());
         //Se aplica el LongClickListener
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

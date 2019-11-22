@@ -9,11 +9,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
 import com.example.conscot.ui.Conexion;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -32,16 +35,21 @@ public class productos_fragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_cat_product, container, false);
         conexion=new Conexion().conexion();
         final RecyclerView lista_productos = root.findViewById(R.id.Lista_productos);
+        FloatingActionButton Conscot = root.findViewById(R.id.Cotizar);
+        Conscot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                Corizacion_fragment cotizacion = new Corizacion_fragment();
+                fragmentTransaction.replace(R.id.container_home, cotizacion);
+                fragmentTransaction.commit();
+            }
+        });
         lista_productos.setLayoutManager(new LinearLayoutManager(getContext()));
         //mandando datos al recycler view
         lista_productos.setAdapter(new productos_adapter(obtenerProdcutosBD()));
-        lista_productos.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                lista_productos.getAdapter().getItemId(3);
-                return false;
-            }
-        });
         return root;
     }
     //Metodo para obtener los productos de la bd
