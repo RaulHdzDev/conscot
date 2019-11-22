@@ -5,26 +5,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
+import com.example.conscot.Utilities.Conexion;
 import com.example.conscot.tareas_components.tareas_adapter;
 import com.example.conscot.tareas_components.tareas_datos_rv;
-import com.example.conscot.ui.Usuarios;
 
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import com.example.conscot.ui.*;
 
 public class SlideshowFragment extends Fragment {
 
