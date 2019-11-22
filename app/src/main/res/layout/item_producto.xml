@@ -15,25 +15,19 @@
 
         <TextView
             android:id="@+id/descripcion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                android:layout_width="60dp"
+            android:layout_height="20dp"
             android:layout_weight="1"
             android:text="Cemento"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/precio"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAlignment="center"
             android:text="$350.00" />
-
-        <CheckBox
-            android:id="@+id/añadir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
     </LinearLayout>
 </FrameLayout>
 </RelativeLayout>

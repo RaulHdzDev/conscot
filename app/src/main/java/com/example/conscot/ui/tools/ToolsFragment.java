@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.conscot.R;
 import com.example.conscot.ui.Constructora.categorias_fragment;
+import com.example.conscot.ui.Constructora.productos_fragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ToolsFragment extends Fragment {
 
@@ -22,10 +24,11 @@ public class ToolsFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_constructoras, container, false);
         FrameLayout frameLayout = root.findViewById(R.id.construrama_bt);
+        FloatingActionButton mapa = root.findViewById(R.id.Mapa);
         frameLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                productos_fragment.Constructora_seleccionada="Construrama";
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();

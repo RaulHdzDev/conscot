@@ -19,6 +19,22 @@ public class categorias_fragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_cons_categories, container, false);
         Button cementos= root.findViewById(R.id.btn_cemento);
         Button aceros = root.findViewById(R.id.btAceros);
+        Button otros_productos = root.findViewById(R.id.btOtros);
+        //Click otros productos
+        otros_productos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Otros materiales";
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                productos_fragment productos_fragment = new productos_fragment();
+                fragmentTransaction.replace(R.id.container_home, productos_fragment);
+                fragmentTransaction.commit();
+            }
+        });
         //click en la categorias aceros
         aceros.setOnClickListener(new View.OnClickListener() {
             @Override
