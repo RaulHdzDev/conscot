@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,6 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.conscot.R;
+import com.example.conscot.ui.tools.ToolsFragment;
 
 public class categorias_fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -19,7 +22,20 @@ public class categorias_fragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_cons_categories, container, false);
         Button cementos= root.findViewById(R.id.btn_cemento);
         Button aceros = root.findViewById(R.id.btAceros);
+        TextView regresar=root.findViewById(R.id.Regresar_a_constructoras);
         Button otros_productos = root.findViewById(R.id.btOtros);
+        //Regresa a constructora
+        regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                ToolsFragment Constructoras = new ToolsFragment();
+                fragmentTransaction.replace(R.id.container_home, Constructoras);
+                fragmentTransaction.commit();
+            }
+        });
         //Click otros productos
         otros_productos.setOnClickListener(new View.OnClickListener() {
             @Override

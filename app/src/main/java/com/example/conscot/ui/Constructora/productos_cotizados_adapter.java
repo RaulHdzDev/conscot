@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 
 public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_cotizados_adapter.TareasViewHolder> {
     ArrayList<descripcio_productos_dialog> lista_productos;
-
+   static ArrayList<Double> Lista_precio= new ArrayList<>();
     public productos_cotizados_adapter(ArrayList<descripcio_productos_dialog> listaProductos) {
         this.lista_productos = listaProductos;
     }
@@ -33,9 +34,17 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
     @Override
     public void onBindViewHolder(@NonNull TareasViewHolder holder, final int position) {
         holder.Descripcion.setText(lista_productos.get(position).getCaracteristicas());
-        holder.precio.setText("$"+Integer.parseInt(lista_productos.get(position).getPrecio())*
-                lista_productos.get(position).getCantidad());
+        double precio=Double.parseDouble(lista_productos.get(position).getPrecio())*lista_productos.get(position).getCantidad();
+        holder.precio.setText("$"+precio);
         holder.Constructora.setText(productos_fragment.Constructora_seleccionada);
+        Lista_precio.add(precio);
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                //POP up menu para eliminar productos seleccionados
+                return true;
+            }
+        });
     }
 
 

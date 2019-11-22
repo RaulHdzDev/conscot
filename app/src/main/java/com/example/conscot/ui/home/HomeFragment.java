@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.conscot.R;
+import com.example.conscot.fragment_tareas;
 import com.example.conscot.ui.slideshow.SlideshowFragment;
 import com.example.conscot.ui.tools.ToolsFragment;
 
@@ -28,17 +29,9 @@ public class HomeFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();
-                SlideshowFragment fragment = new SlideshowFragment();
+                fragment_tareas fragment = new fragment_tareas();
                 fragmentTransaction.replace(R.id.container_home, fragment);
                 fragmentTransaction.commit();
-            }
-        });
-
-        TextView planos= root.findViewById(R.id.planos);
-        planos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Fragment planos
             }
         });
 
