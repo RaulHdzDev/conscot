@@ -9,11 +9,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
 import com.example.conscot.ui.Conexion;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -25,30 +28,29 @@ public class productos_fragment extends Fragment {
     //Variable estática en la que se va a guardar el valor de la categoría que se seleccionó en el
     //fragment anterior
     public static String categoriaSeleccionada = null;
-
+    public static String Constructora_seleccionada=null;
     private Connection conexion;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_cat_product, container, false);
         conexion=new Conexion().conexion();
-        RecyclerView lista_productos = root.findViewById(R.id.Lista_productos);
+        final RecyclerView lista_productos = root.findViewById(R.id.Lista_productos);
+        FloatingActionButton Conscot = root.findViewById(R.id.Cotizar);
+        Conscot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                Corizacion_fragment cotizacion = new Corizacion_fragment();
+                fragmentTransaction.replace(R.id.container_home, cotizacion);
+                fragmentTransaction.commit();
+            }
+        });
         lista_productos.setLayoutManager(new LinearLayoutManager(getContext()));
         //mandando datos al recycler view
         lista_productos.setAdapter(new productos_adapter(obtenerProdcutosBD()));
-
         return root;
-    }
-    //IGNORAR ESTO
-    private  ArrayList<descripcio_productos>obtenerProductos(){
-        ArrayList<descripcio_productos>lista= new ArrayList<>();
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        lista.add(new descripcio_productos("300","Cemento vergas"));
-        return lista;
     }
     //Metodo para obtener los productos de la bd
     private ArrayList<descripcio_productos> obtenerProdcutosBD(){
@@ -57,10 +59,10 @@ public class productos_fragment extends Fragment {
             //Aqui ocupo que dependiendo de que categoria se cliqueo me lo traiga para aca
             //por el momento le puse ese de cementos
             //Las categorias existentes en la bd son: Aceros, Cemento, Otros materiales. Asi como los escribi
-            String categoria="Cemento";
-            String SQL = "select Producto,Precio from Productos\n" +
-                    "inner join tipo on Productos.id_sub_tipo=tipo.id_tipo\n" +
-                    "where tipo.tipo='"+categoriaSeleccionada+"';";
+            String SQL = "SELECT Productos.Producto,Productos.Precio from Productos\n" +
+                    "inner join tipo on Productos.id_tipo=tipo.id_tipo\n" +
+                    "inner join Constructoras on Productos.id_Constructora=Constructoras.id_constructora\n" +
+                    "where tipo.tipo='"+categoriaSeleccionada+"' and Constructoras.Nombre_constructora='"+Constructora_seleccionada+"';";
             Statement st = conexion.createStatement();
             ResultSet rs = st.executeQuery(SQL);
             while (rs.next()) {

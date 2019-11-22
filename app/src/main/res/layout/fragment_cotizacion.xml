@@ -117,53 +117,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/comfortaa"
-                                    android:text="Construsctora"
-                                    android:textAlignment="center"
-                                    android:textColor="#000"
-                                    android:textSize="15dp"/>
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:background="@drawable/icon_cemento"/>
-                                <TextView
-                                    android:layout_width="150dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/comfortaa"
-                                    android:text="Nombre de material"
-                                    android:textAlignment="center"
-                                    android:textColor="#000"
-                                    android:textSize="15dp"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/comfortaa"
-                                    android:text="$999.99"
-                                    android:textAlignment="center"
-                                    android:textColor="#000"
-                                    android:textSize="15dp"/>
-
-
-                            </LinearLayout>
+                           <androidx.recyclerview.widget.RecyclerView
+                               android:layout_width="match_parent"
+                               android:id="@+id/productos_cotizados"
+                               android:layout_height="wrap_content"/>
 
 
                         </FrameLayout>
@@ -265,6 +222,7 @@
                     </FrameLayout>
 
                     <Button
+                        android:id="@+id/Cotizar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -273,7 +231,7 @@
                         android:background="@drawable/btn_constructora"
                         android:fontFamily="@font/comfortaa_bold"
                         android:textColor="#fff"
-                        android:text="Aceptar"/>
+                        android:text="Cotizar"/>
 
 
 

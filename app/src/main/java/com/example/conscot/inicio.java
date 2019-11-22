@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +42,8 @@ public class inicio extends AppCompatActivity {
                 Intent  intent = new Intent(view.getContext(), Menuslide.class);
                 view.getContext().startActivity(intent);
                 //iniciarSesion();
+
+
             }
         });
 
@@ -69,11 +72,9 @@ public class inicio extends AppCompatActivity {
         //Instancia de los componentes para el Login
         EditText etUsuario = findViewById(R.id.etUsuarioIS);
         EditText etContrasena = findViewById(R.id.etContrasenaIS);
-
         //Valores String para hacer el login
         String usuarioStr = etUsuario.getText().toString();
         String contrasenaStr = etContrasena.getText().toString();
-
         //Verifica que los campos no estén vacíos
         if (usuarioStr.equals("")){
             Toast.makeText(this, "Ingrese un usuario válido", Toast.LENGTH_SHORT).show();
@@ -166,7 +167,7 @@ public class inicio extends AppCompatActivity {
             //Variable para guardar los resultados
             Usuarios user = null;
             try {
-                String SQL = "SELECT Usuario, Contraseña FROM Usuarios WHERE Usuario = '"+usuario+"';";
+                String SQL = "SELECT Usuario, Contraseña, Correo FROM Usuarios WHERE Usuario = '"+usuario+"';";
                 Statement st = conexion.createStatement();
                 ResultSet rs = st.executeQuery(SQL);
                 while (rs.next()) {
@@ -198,6 +199,7 @@ public class inicio extends AppCompatActivity {
                     //Login exitoso -> pasa a la pantalla de inicio y cierra la actual
                     Intent  intent = new Intent(context.get(), Menuslide.class);
                     context.get().startActivity(intent);
+
                     //Cierra esta pantalla
                     ((Activity)context.get()).finish();
                     break;

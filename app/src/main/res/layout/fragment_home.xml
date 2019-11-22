@@ -98,10 +98,8 @@
         android:id="@+id/planos"
         android:layout_width="340dp"
         android:layout_height="83dp"
-        android:background="@drawable/amarillo"
         android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
-        android:text="Planos 2D                  "
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,17 +132,6 @@
         app:layout_constraintVertical_bias="0.473"
         app:srcCompat="@drawable/tarea" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="73dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="@+id/planos"
-        app:layout_constraintEnd_toEndOf="@+id/planos"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="@+id/planos"
-        app:layout_constraintTop_toTopOf="@+id/planos"
-        app:layout_constraintVertical_bias="0.48"
-        app:srcCompat="@drawable/plano" />
    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
