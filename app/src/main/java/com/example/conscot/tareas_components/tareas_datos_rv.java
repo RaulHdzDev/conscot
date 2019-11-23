@@ -2,16 +2,16 @@ package com.example.conscot.tareas_components;
 
 public class tareas_datos_rv {
 
-    public String nom;
-    public String tipo;
-    public String desc;
+    private String nom;
+    private String tipo;
+    private String desc;
 
 
 
     public tareas_datos_rv(String nombre_de_la_tarea, String tipo_de_tarea, String descripcion_de_la_tarea) {
-        this.nom = nom;
-        this.tipo = tipo;
-        this.desc = desc;
+        this.nom = nombre_de_la_tarea;
+        this.tipo = tipo_de_tarea;
+        this.desc = descripcion_de_la_tarea;
     }
 
 
@@ -28,8 +28,8 @@ public class tareas_datos_rv {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setTipo(String tip) {
+        this.tipo = tip;
     }
 
     public String getDesc() {

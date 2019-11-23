@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.conscot.R;
 import com.example.conscot.fragment_tareas;
+
+
 import com.example.conscot.ui.slideshow.SlideshowFragment;
 import com.example.conscot.ui.tools.ToolsFragment;
 
