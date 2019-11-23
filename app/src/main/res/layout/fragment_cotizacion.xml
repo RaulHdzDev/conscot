@@ -14,154 +14,89 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/colorPrimary">
-
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="@drawable/btn_slide"
-                        android:drawableLeft="@drawable/busco"
-                        android:fontFamily="@font/comfortaa"
-                        android:hint="Buscar"
-                        android:paddingStart="15dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:textCursorDrawable="@color/colorPrimary"
-                        android:textSize="20dp" />
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="20dp"
-                        >
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_horizontal"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-                                android:fontFamily="@font/comfortaa"
-                                android:text="Constructoras"
-                                android:textAlignment="center"
-                                android:textColor="#000"
-                                android:textSize="15dp"/>
-                            <TextView
-                                android:layout_width="180dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-
-                                android:fontFamily="@font/comfortaa"
-                                android:text="Material"
-                                android:textAlignment="center"
-                                android:textColor="#000"
-                                android:textSize="15dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="5dp"
-
-                                android:fontFamily="@font/comfortaa"
-                                android:text="Precio"
-                                android:textAlignment="center"
-                                android:textColor="#000"
-                                android:textSize="15dp"/>
-
-                        </LinearLayout>
-
-
-
-                    </FrameLayout>
-
-
-
-                </LinearLayout>
-
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_gravity="center_horizontal"
-                android:background="#ffff" >
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/Regresar_a_productos"
+                            android:layout_width="48dp"
+                            android:layout_height="46dp"
+                            android:background="@drawable/amarillo"
+                            android:foreground="@drawable/ic_back" />
+
+                        <androidx.appcompat.widget.SearchView
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/btn_slide"
+                            android:drawableLeft="@drawable/busco"
+                            android:fontFamily="@font/comfortaa"
+                            android:hint="Buscar"
+                            android:paddingStart="15dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textCursorDrawable="@color/colorPrimary"
+                            android:textSize="20dp" />
+
                         <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp">
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
                                 android:orientation="horizontal">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="5dp"
                                     android:layout_marginTop="5dp"
                                     android:fontFamily="@font/comfortaa"
-                                    android:text="Construsctora"
+                                    android:text="Constructoras"
                                     android:textAlignment="center"
                                     android:textColor="#000"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp" />
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:background="@drawable/icon_cemento"/>
                                 <TextView
-                                    android:layout_width="150dp"
+                                    android:layout_width="180dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="5dp"
                                     android:layout_marginTop="5dp"
+
                                     android:fontFamily="@font/comfortaa"
-                                    android:text="Nombre de material"
+                                    android:text="Material"
                                     android:textAlignment="center"
                                     android:textColor="#000"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:layout_marginLeft="5dp"
                                     android:layout_marginTop="5dp"
+
                                     android:fontFamily="@font/comfortaa"
-                                    android:text="$999.99"
+                                    android:text="Precio"
                                     android:textAlignment="center"
                                     android:textColor="#000"
-                                    android:textSize="15dp"/>
-
+                                    android:textSize="15dp" />
 
                             </LinearLayout>
 
@@ -171,118 +106,139 @@
 
                     </LinearLayout>
 
-                </ScrollView>
-            </FrameLayout>
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#686868"
-                >
+                </FrameLayout>
 
-                <LinearLayout
+                <FrameLayout
+                    android:layout_width="374dp"
+                    android:layout_height="500dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#ffff">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/productos_cotizados"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </FrameLayout>
+
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    >
+                    android:background="#686868">
 
-                    <FrameLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                        <LinearLayout
+                        <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="10dp"
-                                android:fontFamily="@font/comfortaa"
-                                android:text="Productos:"
-                                android:textAlignment="center"
-                                android:textColor="#fff"
-                                android:textSize="15dp"/>
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:fontFamily="@font/comfortaa"
-                                android:text="-@numdeprod"
-                                android:textAlignment="textEnd"
-                                android:textColor="#fff"
-                                android:textSize="15dp"/>
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
 
 
+                        </FrameLayout>
 
-
-
-                        </LinearLayout>
-
-
-                    </FrameLayout>
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <LinearLayout
+                        <FrameLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="10dp"
-                                android:fontFamily="@font/comfortaa"
-                                android:text="Total:"
-                                android:textAlignment="center"
-                                android:textColor="#fff"
-                                android:textSize="15dp"/>
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginEnd="10dp"
-                                android:fontFamily="@font/comfortaa"
-                                android:text="-@Total"
-                                android:textAlignment="textEnd"
-                                android:textColor="#fff"
-                                android:textSize="15dp"/>
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/comfortaa"
+                                    android:text="Total:"
+                                    android:textAlignment="center"
+                                    android:textColor="#fff"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:id="@+id/total_cotizacion"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/comfortaa"
+                                    android:text="-@Total"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="#fff"
+                                    android:textSize="15dp" />
 
 
+                            </LinearLayout>
 
 
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/Cotizar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_constructora"
+                                android:fontFamily="@font/comfortaa_bold"
+                                android:text="Cotizar"
+                                android:textColor="#fff" />
+                            <View
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/Limpiar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_constructora"
+                                android:fontFamily="@font/comfortaa_bold"
+                                android:text="Limpiar lista"
+                                android:textColor="#fff" />
 
                         </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
 
 
-                    </FrameLayout>
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginRight="50dp"
-                        android:background="@drawable/btn_constructora"
-                        android:fontFamily="@font/comfortaa_bold"
-                        android:textColor="#fff"
-                        android:text="Aceptar"/>
-
-
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-
-        </LinearLayout>
+            </LinearLayout>
         </ScrollView>
 
         

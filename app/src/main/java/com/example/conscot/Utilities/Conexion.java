@@ -1,4 +1,4 @@
-package com.example.conscot.ui;
+package com.example.conscot.Utilities;
 
 import android.os.StrictMode;
 

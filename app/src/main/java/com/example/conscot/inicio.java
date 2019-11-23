@@ -12,9 +12,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import com.example.conscot.ui.Conexion;
 import com.example.conscot.ui.SaveSharedPreference;
 import com.example.conscot.ui.Usuarios;
+
+import com.example.conscot.Utilities.Conexion;
+import com.example.conscot.Utilities.SaveSharedPreference;
+import com.example.conscot.Utilities.Usuarios;
+
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -46,15 +52,16 @@ public class inicio extends AppCompatActivity {
 
 
 
+
             }
         });
 
         //Verifica que no haya una sesión iniciada
-        /*if(SaveSharedPreference.getLoggedStatus(getApplicationContext())) {
-            Intent intent = new Intent(getApplicationContext(), inicio_activity.class);
+        if(SaveSharedPreference.getLoggedStatus(getApplicationContext())) {
+            Intent intent = new Intent(getApplicationContext(), Menuslide.class);
             startActivity(intent);
             finish();
-        }*/
+        }
 
     }
 
@@ -74,11 +81,9 @@ public class inicio extends AppCompatActivity {
         //Instancia de los componentes para el Login
         EditText etUsuario = findViewById(R.id.etUsuarioIS);
         EditText etContrasena = findViewById(R.id.etContrasenaIS);
-
         //Valores String para hacer el login
         String usuarioStr = String.valueOf(etUsuario.getText());
         String contrasenaStr = etContrasena.getText().toString();
-
         //Verifica que los campos no estén vacíos
         if (usuarioStr.equals("")){
             Toast.makeText(this, "Ingrese un usuario válido", Toast.LENGTH_SHORT).show();
@@ -89,9 +94,33 @@ public class inicio extends AppCompatActivity {
             return;
         }
 
+        //Verifica que el telefono tenga conexión a internet
+        if (!isOnline()){
+            Toast.makeText(this, "Verifique su conexión a internet", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //Instancia de la clase para hacer el login en background
         new HacerEnBack(this).execute(usuarioStr, contrasenaStr);
 
+    }
+
+    //Método para verificar la conexión a internet
+    public boolean isOnline() {
+        //Obtiene el runtime del dispositivo
+        Runtime runtime = Runtime.getRuntime();
+        try {
+            //Ejecuta un ping al servidor DNS de Google
+            Process ipProcess = runtime.exec("/system/bin/ping -c 1 8.8.8.8");
+            //Guarda el valor de la espera del ping
+            int exitValue = ipProcess.waitFor();
+            //Retorna si obtuvo respuesta
+            return (exitValue == 0);
+        }
+        catch (Exception e){
+        }
+        //Retorno en caso de aparecer una excepcion
+        return false;
     }
 
     //Clase interna para hacer las operaciones en background y así no se vean reflejadas en el
@@ -103,6 +132,10 @@ public class inicio extends AppCompatActivity {
         private WeakReference<Context> context;
         //Para establecer una conexión con la BD
         private Connection conexion = null;
+
+
+        private String usuario = null;
+        private String correo = null;
 
 
         //Constructor de la clase
@@ -163,7 +196,11 @@ public class inicio extends AppCompatActivity {
             //Variable para guardar los resultados
             Usuarios user = null;
             try {
+
                 String SQL = "SELECT id, Usuario, Contraseña FROM Usuarios WHERE Usuario = '"+usuario+"';";
+
+                String SQL = "SELECT Usuario, Contraseña, Correo FROM Usuarios WHERE Usuario = '"+usuario+"';";
+
                 Statement st = conexion.createStatement();
                 ResultSet rs = st.executeQuery(SQL);
                 while (rs.next()) {
@@ -171,7 +208,12 @@ public class inicio extends AppCompatActivity {
 
                     user = new Usuarios(rs.getString("Usuario"), rs.getString("Contraseña"));
 
+
                     saveUserId( context.get(), rs.getString("id"));
+
+
+                    this.usuario = rs.getString("Usuario");
+                    this.correo = rs.getString("Correo");
 
                 }
                 //Se cierran conexiones
@@ -195,10 +237,12 @@ public class inicio extends AppCompatActivity {
                     break;
                 case "C":
                     //Establece que se ha iniciado una sesión y debe mantenerla abierta
-                    /*SaveSharedPreference.setLoggedIn(context.get(), true);*/
+                    //Guarda el valor del usuario y correo del usuario loggeado
+                    SaveSharedPreference.setPreferences(context.get(), true, usuario, correo);
                     //Login exitoso -> pasa a la pantalla de inicio y cierra la actual
                     Intent  intent = new Intent(context.get(), Menuslide.class);
                     context.get().startActivity(intent);
+
                     //Cierra esta pantalla
                     ((Activity)context.get()).finish();
                     break;

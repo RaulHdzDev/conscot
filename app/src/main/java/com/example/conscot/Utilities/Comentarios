@@ -1,0 +1,2 @@
+Para obtener el usuario y correo actuales llamar a los métodos
+getCurrentUser y getCurrentEmail de la clase SaveSharedPreference

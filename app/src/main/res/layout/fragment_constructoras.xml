@@ -14,6 +14,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/Regresar_a_home"
+                android:layout_width="48dp"
+                android:layout_height="46dp"
+                android:background="@drawable/amarillo"
+                android:foreground="@drawable/ic_back" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -72,7 +78,7 @@
                         android:background="#ffff">
 
                         <FrameLayout
-                            android:id="@+id/Brocha"
+                            android:id="@+id/Brocha_bt"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginTop="20dp"
@@ -96,7 +102,7 @@
                         </FrameLayout>
 
                         <FrameLayout
-                            android:id="@+id/Martinez"
+                            android:id="@+id/Martinez_bt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -146,7 +152,7 @@
                         </FrameLayout>
 
                         <FrameLayout
-                            android:id="@+id/Dimarsa"
+                            android:id="@+id/Dimarsa_bt"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"

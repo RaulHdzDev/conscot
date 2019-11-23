@@ -22,44 +22,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
 
-        android:id="@+id/editText"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/btn_slide"
-        android:drawableLeft="@drawable/busco"
-        android:fontFamily="@font/comfortaa"
-        android:hint="Buscar en Coscot"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textColorHint="@color/design_default_color_primary"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_anchor="@+id/appBarLayout"
-        app:layout_anchorGravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="336dp"
-        android:layout_height="202dp"
-        android:layout_gravity="center"
-        android:src="@drawable/casa1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
+       <ImageView
+           android:id="@+id/imageView5"
+           android:layout_width="366dp"
+           android:layout_height="237dp"
+           android:layout_gravity="center"
+           android:src="@drawable/casa1"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintVertical_bias="0.108" />
 
     <TextView
         android:id="@+id/constructora"
@@ -94,14 +68,14 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <TextView
-        android:id="@+id/planos"
+        android:id="@+id/Mapa"
         android:layout_width="340dp"
         android:layout_height="83dp"
-        android:background="@drawable/amarillo"
         android:fontFamily="@font/comfortaa_bold"
         android:gravity="center"
-        android:text="Planos 2D                  "
         android:textSize="25dp"
+        android:text="Mapa"
+        android:background="@drawable/amarillo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -133,17 +107,6 @@
         app:layout_constraintVertical_bias="0.473"
         app:srcCompat="@drawable/tarea" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="73dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="@+id/planos"
-        app:layout_constraintEnd_toEndOf="@+id/planos"
-        app:layout_constraintHorizontal_bias="0.906"
-        app:layout_constraintStart_toStartOf="@+id/planos"
-        app:layout_constraintTop_toTopOf="@+id/planos"
-        app:layout_constraintVertical_bias="0.48"
-        app:srcCompat="@drawable/plano" />
    </androidx.constraintlayout.widget.ConstraintLayout>
 
 

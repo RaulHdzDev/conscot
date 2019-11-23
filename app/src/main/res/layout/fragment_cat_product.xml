@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
+        android:id="@+id/Cotizar"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
+        android:foreground="@drawable/conscotlogo"
+        app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/amarillo_floating" />
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92">
 
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/Regresar_a_categorias"
+                android:layout_width="48dp"
+                android:layout_height="46dp"
+                android:background="@drawable/amarillo"
+                android:foreground="@drawable/ic_back" />
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -34,10 +48,11 @@
                     android:background="#3e3e3e"
                     android:orientation="vertical">
 
-                    <EditText
+
+                    <androidx.appcompat.widget.SearchView
                         android:id="@+id/Buscar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="54dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginRight="20dp"
@@ -45,6 +60,7 @@
                         android:drawableLeft="@drawable/busco"
                         android:fontFamily="@font/comfortaa"
                         android:hint="Buscar"
+                        android:inputType="textPersonName"
                         android:paddingStart="15dp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -104,12 +120,13 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="#ffff" >
+
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
 
-                    <ListView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/Lista_productos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />

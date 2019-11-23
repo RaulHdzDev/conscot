@@ -11,22 +11,17 @@
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.conscot.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_plano" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.conscot.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_nuevatarea" />
+        android:name="com.example.conscot.tareas_components.tustareasFragment"
+        android:label="TAREAS"
+        tools:layout="@layout/fragment_tustareas" />
 
     <fragment
         android:id="@+id/nav_tools"
         android:name="com.example.conscot.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
+        android:label="CONSTRUCTORAS"
         tools:layout="@layout/fragment_constructoras" />
 
     <fragment

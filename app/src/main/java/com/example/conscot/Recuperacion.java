@@ -1,4 +1,4 @@
-package com.example.conscot.ui;
+package com.example.conscot;
 
 public class Recuperacion {
     private String correo;
