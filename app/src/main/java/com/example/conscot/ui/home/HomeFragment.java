@@ -6,26 +6,59 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.conscot.R;
+import com.example.conscot.ui.slideshow.SlideshowFragment;
+import com.example.conscot.ui.tools.ToolsFragment;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        homeViewModel.getText().observe(this, new Observer<String>() {
+        //Click para abrir fragment de tareas
+        TextView Tareas = root.findViewById(R.id.tareas);
+        Tareas.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                SlideshowFragment fragment = new SlideshowFragment();
+                fragmentTransaction.replace(R.id.container_home, fragment);
+                fragmentTransaction.commit();
+            }
+        });
+
+        TextView planos= root.findViewById(R.id.planos);
+        planos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Fragment planos
+            }
+        });
+
+        //se añade el fragment contenedor donde se estan pasando los demas fragments
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction =
+                fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.container_home,new HomeFragment());
+
+        //Click para abrir fragment de constructoras
+        TextView constructoras = root.findViewById(R.id.constructora);
+        constructoras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                ToolsFragment fragment = new ToolsFragment();
+                fragmentTransaction.replace(R.id.container_home, fragment);
+                fragmentTransaction.commit();
             }
         });
         return root;
