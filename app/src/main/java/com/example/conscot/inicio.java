@@ -13,13 +13,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.conscot.ui.Conexion;
-import com.example.conscot.ui.SaveSharedPreference;
 import com.example.conscot.ui.Usuarios;
 
 import com.example.conscot.Utilities.Conexion;
 import com.example.conscot.Utilities.SaveSharedPreference;
-import com.example.conscot.Utilities.Usuarios;
 
 
 import java.io.FileNotFoundException;
@@ -47,11 +44,8 @@ public class inicio extends AppCompatActivity {
         btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent  intent = new Intent(view.getContext(), Menuslide.class);
+
                 iniciarSesion();
-
-
-
 
             }
         });
@@ -199,7 +193,7 @@ public class inicio extends AppCompatActivity {
 
                 String SQL = "SELECT id, Usuario, Contraseña FROM Usuarios WHERE Usuario = '"+usuario+"';";
 
-                String SQL = "SELECT Usuario, Contraseña, Correo FROM Usuarios WHERE Usuario = '"+usuario+"';";
+             //   String SQL = "SELECT Usuario, Contraseña, Correo FROM Usuarios WHERE Usuario = '"+usuario+"';";
 
                 Statement st = conexion.createStatement();
                 ResultSet rs = st.executeQuery(SQL);

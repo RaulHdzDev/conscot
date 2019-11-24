@@ -1,16 +1,18 @@
 package com.example.conscot.ui.Constructora;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.graphics.Color;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
@@ -32,7 +34,7 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TareasViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final TareasViewHolder holder, final int position) {
         holder.Descripcion.setText(lista_productos.get(position).getCaracteristicas());
         double precio=Double.parseDouble(lista_productos.get(position).getPrecio())*lista_productos.get(position).getCantidad();
         holder.precio.setText("$"+precio);
@@ -40,8 +42,22 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
         Lista_precio.add(precio);
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public boolean onLongClick(View v) {
+            public boolean onLongClick(final View v) {
                 //POP up menu para eliminar productos seleccionados
+                PopupMenu popupMenu= new PopupMenu(v.getContext(),v);
+                MenuInflater inflater=popupMenu.getMenuInflater();
+                inflater.inflate(R.menu.menu_productos,popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        lista_productos.remove(position);
+                        Lista_precio.remove(position);
+                        Toast.makeText(v.getContext(),"Se elimino",Toast.LENGTH_LONG).show();
+
+                        return true;
+                    }
+                });
+                popupMenu.show();
                 return true;
             }
         });

@@ -2,7 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Añadir"
+        android:title="Eliminar"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@color/colorPrimary"
+        android:iconTintMode="src_in"
         android:id="@+id/pAñadir"
         ></item>
 

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -75,9 +76,7 @@ public class SlideshowFragment extends Fragment {
         {
             Log.e("Ficheros", "Error al leer fichero desde memoria interna");
         }
-      
-        Button guardar = root.findViewById(R.id.guardar);
-        return root;
+
 
     }
 
@@ -87,7 +86,7 @@ public class SlideshowFragment extends Fragment {
 
             String SQL = "SELECT Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea FROM Tareas_usuarios WHERE id_Usuario='"+iduser+"';";
 
-            String SQL = "SELECT Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea FROM Tareas_usuarios;";
+           // String SQL = "SELECT Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea FROM Tareas_usuarios;";
 
             Statement st = new Conexion().conexion().createStatement();
             ResultSet rs = st.executeQuery(SQL);
