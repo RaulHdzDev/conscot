@@ -44,6 +44,7 @@ public class fragment_tareas extends Fragment {
     }
 //actaulizado xdxd
     //xdddd
+    //ei
 
     private Connection conexion = null;
 
