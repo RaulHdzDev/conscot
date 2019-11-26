@@ -34,7 +34,7 @@ public class HomeFragment extends Fragment {
 
         //SLIDE
 
-        int imagenes[] = {R.drawable.slide1, R.drawable.slide22, R.drawable.slide3, R.drawable.Slide44, R.drawable.slide55};
+        int imagenes[] = {R.drawable.slide1, R.drawable.slide22, R.drawable.slide3, R.drawable.slide44, R.drawable.slide55};
 
         v_flipper = root.findViewById(R.id.v_flipper);
 
