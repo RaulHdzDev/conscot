@@ -1,5 +1,6 @@
 package com.example.conscot.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.example.conscot.R;
 import com.example.conscot.fragment_tareas;
 
 
+import com.example.conscot.mapas;
 import com.example.conscot.ui.slideshow.SlideshowFragment;
 import com.example.conscot.ui.tools.ToolsFragment;
 
@@ -54,6 +56,15 @@ public class HomeFragment extends Fragment {
                 ToolsFragment fragment = new ToolsFragment();
                 fragmentTransaction.replace(R.id.container_home, fragment);
                 fragmentTransaction.commit();
+            }
+        });
+
+        TextView map = root.findViewById(R.id.mapa);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), mapas.class);
+                startActivity(intent);
             }
         });
         return root;
