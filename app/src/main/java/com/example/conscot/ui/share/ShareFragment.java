@@ -1,5 +1,6 @@
 package com.example.conscot.ui.share;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,23 +14,29 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.conscot.R;
+import com.example.conscot.acercadeDev;
+import com.example.conscot.mapas;
 
 public class ShareFragment extends Fragment {
 
     private ShareViewModel shareViewModel;
 
+    TextView creditos;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(ShareViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_acercade, container, false);
-        final TextView textView = root.findViewById(R.id.text_share);
-        shareViewModel.getText().observe(this, new Observer<String>() {
+        View vista = inflater.inflate(R.layout.fragment_acercade, container, false);
+
+        creditos = vista.findViewById(R.id.creditos);
+        creditos.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(), acercadeDev.class);
+                startActivity(i);
             }
         });
-        return root;
+
+
+        return vista;
     }
 }

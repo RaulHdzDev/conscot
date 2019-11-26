@@ -14,10 +14,10 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Tus Tareas</string>
     <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Acerca de</string>
     <string name="menu_send">Send</string>
 
-    <string name="home">Home</string>
+    <string name="home">Inicio</string>
     <string name="planos">Planos</string>
     <string name="tarea">Tus tareas</string>
     <string name="acerca">Acerca de </string>

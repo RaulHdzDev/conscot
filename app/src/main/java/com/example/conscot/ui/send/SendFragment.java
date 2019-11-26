@@ -26,6 +26,7 @@ public class SendFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_cerrarsesion, container, false);
         SaveSharedPreference.setPreferences(getContext(), false, "", "", "");
         startActivity(new Intent(getContext(), inicio.class));
+        getActivity().finish();
 
         return root;
     }
