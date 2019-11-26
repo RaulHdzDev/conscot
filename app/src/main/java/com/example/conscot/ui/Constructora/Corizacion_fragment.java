@@ -44,7 +44,6 @@ public class Corizacion_fragment extends Fragment {
         final TextView total = v.findViewById(R.id.total_cotizacion);
         productos_cotizados_adapter adapter = new productos_cotizados_adapter(productos_fragment.productos_seleccionados);
         recyclerView.setAdapter(adapter);
-
         Cotizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

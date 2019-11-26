@@ -62,7 +62,7 @@
                                     android:textSize="15dp" />
 
                                 <TextView
-                                    android:layout_width="180dp"
+                                    android:layout_width="100dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
 
@@ -73,7 +73,17 @@
                                     android:textSize="15dp" />
 
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="89dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/comfortaa"
+                                    android:text="Cant"
+                                    android:textAlignment="center"
+                                    android:textColor="#000"
+                                    android:textSize="15dp" />
+
+                                <TextView
+                                    android:layout_width="59dp"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="5dp"
 
@@ -95,7 +105,7 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_width="374dp"
+                    android:layout_width="398dp"
                     android:layout_height="500dp"
                     android:layout_gravity="center_horizontal"
                     android:background="#ffff">
@@ -198,7 +208,7 @@
 
                             <Button
                                 android:id="@+id/Cotizar"
-                                android:layout_width="wrap_content"
+                                android:layout_width="160dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/btn_constructora"
                                 android:fontFamily="@font/comfortaa_bold"
@@ -210,7 +220,7 @@
 
                             <Button
                                 android:id="@+id/Limpiar"
-                                android:layout_width="wrap_content"
+                                android:layout_width="143dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/btn_constructora"
                                 android:fontFamily="@font/comfortaa_bold"

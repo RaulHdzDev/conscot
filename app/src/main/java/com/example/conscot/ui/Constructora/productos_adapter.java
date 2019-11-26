@@ -7,6 +7,8 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -84,6 +86,12 @@ public class productos_adapter extends RecyclerView.Adapter<productos_adapter.Ta
     public int getItemCount() {
         return lista_productos.size();
     }
+
+    public void filterList(ArrayList<descripcio_productos> lista_filtrada) {
+        lista_productos=lista_filtrada;
+        notifyDataSetChanged();
+    }
+
 
     public class TareasViewHolder extends RecyclerView.ViewHolder {
         TextView Descripcion, precio;
