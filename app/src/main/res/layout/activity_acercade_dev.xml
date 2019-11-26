@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".acercadeDev">
+    android:orientation="vertical"
+    tools:context=".acercadeDev"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3C3F41">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conscot App"
+                android:textAlignment="center"
+                android:textColor="#ffff"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textSize="30dp"/>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/conscotlogo"
+                android:layout_gravity="center"/>
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#3C3F41">
+
 
         <ScrollView
             android:layout_width="match_parent"
@@ -21,11 +58,19 @@
                 android:orientation="vertical">
 
 
-                <EditText
+
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textAlignment="viewStart"
-                    android:text="                                CONSCOT \n \nDesarrollada por: \n \n
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/comfortaa_light"
+                    android:textColor="#ffff"
+                    android:text="Desarrollada por: \n \n
 ArmandoNariv:Desarrollador de la versión de escritorio para la administración de la información de los usuarios
 . \n\n Teléfono: 8311080780 \n \n \nJoseKboDev: Encargado de diseños, programación acerca de, recuperación de contraseñas, recuperación de tareas.
  \n\n Teléfono: 8311169468 \n\n\nRaúl Alberto: administrador de versiones y BD.
@@ -48,4 +93,4 @@ ArmandoNariv:Desarrollador de la versión de escritorio para la administración 
     </FrameLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

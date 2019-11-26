@@ -28,7 +28,7 @@ public class ToolsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_constructoras, container, false);
         FrameLayout construrama = root.findViewById(R.id.construrama_bt);
         FrameLayout martinez = root.findViewById(R.id.Martinez_bt);
-        FrameLayout la_brocha = root.findViewById(R.id.Brocha_bt);
+        //FrameLayout la_brocha = root.findViewById(R.id.Brocha_bt);
         FrameLayout dimarsa = root.findViewById(R.id.Dimarsa_bt);
         //Regresar a home
         TextView regresar = root.findViewById(R.id.Regresar_a_home);
@@ -71,7 +71,7 @@ public class ToolsFragment extends Fragment {
             }
         });
         //Click a la_brocha_constructora
-        la_brocha.setOnClickListener(new View.OnClickListener() {
+        /*la_brocha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),"Constructora en mantenimiento",Toast.LENGTH_LONG).show();
@@ -82,8 +82,8 @@ public class ToolsFragment extends Fragment {
                 categorias_fragment categorias = new categorias_fragment();
                 fragmentTransaction.replace(R.id.container_home, categorias);
                 fragmentTransaction.commit();*/
-            }
-        });
+          //  }
+        //});
         //Click en dimarsa
         dimarsa.setOnClickListener(new View.OnClickListener() {
             @Override
