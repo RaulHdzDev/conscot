@@ -11,8 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
@@ -22,6 +20,7 @@ import java.util.ArrayList;
 
 public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_cotizados_adapter.TareasViewHolder> {
     ArrayList<descripcio_productos_dialog> lista_productos;
+    static ArrayList<Double> total = new ArrayList<>();
    static ArrayList<Double> Lista_precio= new ArrayList<>();
     public productos_cotizados_adapter(ArrayList<descripcio_productos_dialog> listaProductos) {
         this.lista_productos = listaProductos;
@@ -40,6 +39,7 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
         holder.precio.setText("$"+precio);
         holder.Constructora.setText(productos_fragment.Constructora_seleccionada);
         Lista_precio.add(precio);
+        total.add(precio);
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(final View v) {
@@ -50,10 +50,12 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
+
                         lista_productos.remove(position);
                         Lista_precio.remove(position);
+                        total.remove(position);
                         Toast.makeText(v.getContext(),"Se elimino",Toast.LENGTH_LONG).show();
-
+                        notifyItemRemoved(position);
                         return true;
                     }
                 });
