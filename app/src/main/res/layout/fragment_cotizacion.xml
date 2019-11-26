@@ -37,22 +37,7 @@
                             android:layout_height="46dp"
                             android:background="@drawable/amarillo"
                             android:foreground="@drawable/ic_back" />
-
-                        <androidx.appcompat.widget.SearchView
-                            android:layout_width="match_parent"
-                            android:layout_height="47dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/btn_slide"
-                            android:drawableLeft="@drawable/busco"
-                            android:fontFamily="@font/comfortaa"
-                            android:hint="Buscar"
-                            android:paddingStart="15dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:textCursorDrawable="@color/colorPrimary"
-                            android:textSize="20dp" />
+                        
 
                         <FrameLayout
                             android:layout_width="match_parent"

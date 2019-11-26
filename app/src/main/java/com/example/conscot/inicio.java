@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.conscot.ui.Usuarios;
+import com.example.conscot.Utilities.Usuarios;
 
 import com.example.conscot.Utilities.Conexion;
 import com.example.conscot.Utilities.SaveSharedPreference;
@@ -130,7 +130,7 @@ public class inicio extends AppCompatActivity {
 
         private String usuario = null;
         private String correo = null;
-
+        private String id = null;
 
         //Constructor de la clase
         public HacerEnBack(Context context){
@@ -191,7 +191,7 @@ public class inicio extends AppCompatActivity {
             Usuarios user = null;
             try {
 
-                String SQL = "SELECT id, Usuario, Contraseña FROM Usuarios WHERE Usuario = '"+usuario+"';";
+                String SQL = "SELECT id, Usuario, Contraseña, Correo FROM Usuarios WHERE Usuario = '"+usuario+"';";
 
              //   String SQL = "SELECT Usuario, Contraseña, Correo FROM Usuarios WHERE Usuario = '"+usuario+"';";
 
@@ -204,8 +204,7 @@ public class inicio extends AppCompatActivity {
 
 
                     saveUserId( context.get(), rs.getString("id"));
-
-
+                    this.id = rs.getString("id");
                     this.usuario = rs.getString("Usuario");
                     this.correo = rs.getString("Correo");
 
@@ -232,7 +231,7 @@ public class inicio extends AppCompatActivity {
                 case "C":
                     //Establece que se ha iniciado una sesión y debe mantenerla abierta
                     //Guarda el valor del usuario y correo del usuario loggeado
-                    SaveSharedPreference.setPreferences(context.get(), true, usuario, correo);
+                    SaveSharedPreference.setPreferences(context.get(), true, id, usuario, correo);
                     //Login exitoso -> pasa a la pantalla de inicio y cierra la actual
                     Intent  intent = new Intent(context.get(), Menuslide.class);
                     context.get().startActivity(intent);

@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:inputType="number"
-        android:text="0"
         android:textAlignment="center"
         android:textSize="20dp" />
 

@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
                         fragmentManager.beginTransaction();
                 ToolsFragment fragment = new ToolsFragment();
                 fragmentTransaction.replace(R.id.container_home, fragment);
+
                 fragmentTransaction.commit();
             }
         });
