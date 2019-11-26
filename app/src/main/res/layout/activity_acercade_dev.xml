@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acercadeDev">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="viewStart"
+                    android:text="                                CONSCOT \n \nDesarrollada por: \n \n
+ArmandoNariv:Desarrollador de la versión de escritorio para la administración de la información de los usuarios
+. \n\n Teléfono: 8311080780 \n \n \nJoseKboDev: Encargado de diseños, programación acerca de, recuperación de contraseñas, recuperación de tareas.
+ \n\n Teléfono: 8311169468 \n\n\nRaúl Alberto: administrador de versiones y BD.
+\n\n Teléfono: 8311056027 \n\n\nÁngel Catedral: Desarrollador de login, recuperación de id, Cotización de materiales
+\n\n Teléfono: 8311831951 \n\n\nMiguel Santiago: Desarrollador de mapas, creación de nuevas tareas Lider de team 'CONSCOT'
+\n\n Teléfono: 8311634102 \n\n\nJoaquín Martínez: Desarrollador de módulo constructoras y ABD
+\n\n Teléfono: 8311758967 \n\n\nLuis Estrada: FrontEnd, animación de imagenes en pantalla principal y diseñador de pantallas
+\n\n Teleéfono: 8311652437 \n\n\nJuan Carlos: FrontEnd, diseñador y documentador de la aplicación
+\n\n Teléfono: 8311297640 \n\n\n Jesús Emmanuel: FrontEnd, diseñador app y diseñador de escritorio
+\n\n Teléfono: 8312542110"/>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
