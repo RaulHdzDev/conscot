@@ -17,11 +17,16 @@ import com.example.conscot.R;
 import com.example.conscot.ui.tools.ToolsFragment;
 
 public class categorias_fragment extends Fragment {
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_cons_categories, container, false);
         Button cementos= root.findViewById(R.id.btn_cemento);
         Button aceros = root.findViewById(R.id.btAceros);
+        Button Ferreteria = root.findViewById(R.id.Ferreteria_bt);
+        Button Electricista= root.findViewById(R.id.Electricos_bt);
+        Button Plomeria = root.findViewById(R.id.Plomeria_bt);
+        Button Acabados = root.findViewById(R.id.Acabados_bt);
         TextView regresar=root.findViewById(R.id.Regresar_a_constructoras);
         Button otros_productos = root.findViewById(R.id.btOtros);
         //Regresa a constructora
@@ -51,6 +56,66 @@ public class categorias_fragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+        //Click Acabados
+        Acabados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Acabados";
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                productos_fragment productos_fragment = new productos_fragment();
+                fragmentTransaction.replace(R.id.container_home, productos_fragment);
+                fragmentTransaction.commit();
+            }
+        });
+        //Click Plomeria
+        Plomeria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Plomeria";
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                productos_fragment productos_fragment = new productos_fragment();
+                fragmentTransaction.replace(R.id.container_home, productos_fragment);
+                fragmentTransaction.commit();
+            }
+        });
+        //Click Ferreteria
+        Ferreteria.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Ferreteria";
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                productos_fragment productos_fragment = new productos_fragment();
+                fragmentTransaction.replace(R.id.container_home, productos_fragment);
+                fragmentTransaction.commit();
+            }
+        });
+        //Click Electrico
+        Electricista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Cambio el valor de la variable estática a la categoría seleccionada
+                productos_fragment.categoriaSeleccionada = "Electricos";
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                productos_fragment productos_fragment = new productos_fragment();
+                fragmentTransaction.replace(R.id.container_home, productos_fragment);
+                fragmentTransaction.commit();
+            }
+        });
         //click en la categorias aceros
         aceros.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +123,6 @@ public class categorias_fragment extends Fragment {
 
                 //Cambio el valor de la variable estática a la categoría seleccionada
                 productos_fragment.categoriaSeleccionada = "Aceros";
-
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();
