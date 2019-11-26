@@ -43,9 +43,7 @@ public class fragment_tareas extends Fragment {
         ejecutarConsulta();
         return root;
     }
-//actaulizado xdxd
-    //xdddd
-    //ei
+//actaulizado xd
 
     private Connection conexion = null;
 
