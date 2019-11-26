@@ -34,7 +34,6 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
 
     @Override
     public void onBindViewHolder(@NonNull final TareasViewHolder holder, final int position) {
-
         holder.Descripcion.setText(lista_productos.get(position).getCaracteristicas());
         double precio=Double.parseDouble(lista_productos.get(position).getPrecio())*lista_productos.get(position).getCantidad();
         holder.precio.setText("$"+precio);
@@ -56,7 +55,7 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
                         Lista_precio.remove(position);
                         total.remove(position);
                         Toast.makeText(v.getContext(),"Se elimino",Toast.LENGTH_LONG).show();
-
+                        notifyItemRemoved(position);
                         return true;
                     }
                 });

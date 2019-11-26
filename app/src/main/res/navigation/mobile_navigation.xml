@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.conscot.tareas_components.tustareasFragment"
+        android:name="com.example.conscot.ui.slideshow.SlideshowFragment"
         android:label="TAREAS"
         tools:layout="@layout/fragment_tustareas" />
 
