@@ -207,7 +207,6 @@ public class inicio extends AppCompatActivity {
                     this.id = rs.getString("id");
                     this.usuario = rs.getString("Usuario");
                     this.correo = rs.getString("Correo");
-
                 }
                 //Se cierran conexiones
                 rs.close();
