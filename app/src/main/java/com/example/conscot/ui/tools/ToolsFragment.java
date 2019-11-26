@@ -46,7 +46,7 @@ public class ToolsFragment extends Fragment {
             }
         });
 
-        //Click a martinez_constructora
+        //Click a Construrama
         construrama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,21 +60,20 @@ public class ToolsFragment extends Fragment {
             }
         });
         //Click a martinez_constructora
-        la_brocha.setOnClickListener(new View.OnClickListener() {
+        martinez.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Constructora en mantenimiento",Toast.LENGTH_LONG).show();
-               /* productos_fragment.Constructora_seleccionada="Construrama";
+               productos_fragment.Constructora_seleccionada="Martinez";
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();
                 categorias_fragment categorias = new categorias_fragment();
                 fragmentTransaction.replace(R.id.container_home, categorias);
-                fragmentTransaction.commit();*/
+                fragmentTransaction.commit();
             }
         });
         //Click a la_brocha_constructora
-        martinez.setOnClickListener(new View.OnClickListener() {
+        la_brocha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),"Constructora en mantenimiento",Toast.LENGTH_LONG).show();
@@ -91,14 +90,13 @@ public class ToolsFragment extends Fragment {
         dimarsa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"Constructora en mantenimiento",Toast.LENGTH_LONG).show();
-               /* productos_fragment.Constructora_seleccionada="Construrama";
+                productos_fragment.Constructora_seleccionada="Dimarsa";
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction =
                         fragmentManager.beginTransaction();
                 categorias_fragment categorias = new categorias_fragment();
                 fragmentTransaction.replace(R.id.container_home, categorias);
-                fragmentTransaction.commit();*/
+                fragmentTransaction.commit();
             }
         });
         return root;
