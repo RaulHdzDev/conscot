@@ -40,6 +40,7 @@ public class mapas extends FragmentActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
+        //
         LatLng construrama = new LatLng(22.732869, -98.966804);
         mMap.addMarker(new MarkerOptions().position(construrama).title("Materiales Construrama CD MANTE"));
 
