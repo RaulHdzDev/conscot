@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import static com.example.conscot.Utilities.PreferencesUtility.LOGGED_IN_PREF;
 import static com.example.conscot.Utilities.PreferencesUtility.EMAIL;
 import static com.example.conscot.Utilities.PreferencesUtility.USER;
+import static com.example.conscot.Utilities.PreferencesUtility.USER_ID;
 
 public class SaveSharedPreference {
 
@@ -14,9 +15,10 @@ public class SaveSharedPreference {
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    public static void setPreferences(Context context, boolean loggedIn, String usuario, String correo) {
+    public static void setPreferences(Context context, boolean loggedIn, String id, String usuario, String correo) {
         SharedPreferences.Editor editor = getPreferences(context).edit();
         editor.putBoolean(LOGGED_IN_PREF, loggedIn);
+        editor.putString(USER_ID, id);
         editor.putString(USER, usuario);
         editor.putString(EMAIL, correo);
         editor.apply();
@@ -24,6 +26,10 @@ public class SaveSharedPreference {
 
     public static boolean getLoggedStatus(Context context) {
         return getPreferences(context).getBoolean(LOGGED_IN_PREF, false);
+    }
+
+    public static String getUserId(Context context){
+        return getPreferences(context).getString(USER_ID, "");
     }
 
     public static String getCurrentUser(Context context){
