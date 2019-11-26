@@ -30,7 +30,6 @@ public class ToolsFragment extends Fragment {
         FrameLayout martinez = root.findViewById(R.id.Martinez_bt);
         FrameLayout la_brocha = root.findViewById(R.id.Brocha_bt);
         FrameLayout dimarsa = root.findViewById(R.id.Dimarsa_bt);
-        FloatingActionButton mapa = root.findViewById(R.id.mapa);
         //Regresar a home
         TextView regresar = root.findViewById(R.id.Regresar_a_home);
         regresar.setOnClickListener(new View.OnClickListener() {

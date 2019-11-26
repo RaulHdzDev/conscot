@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
     android:id="@+id/container_home"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" >
+
 
 
         <ImageView
@@ -20,24 +19,69 @@
             android:background="#3e3e3e"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
 
 
-//Estrada
         <ViewFlipper
             android:id="@+id/v_flipper"
-            android:layout_width="367dp"
+            android:layout_width="match_parent"
             android:layout_height="237dp"
+            android:layout_gravity="center"
             android:background="@drawable/deslise"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.43"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.122"
-            ></ViewFlipper>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.108" />
+
+        <TextView
+            android:id="@+id/constructora"
+            android:layout_width="340dp"
+            android:layout_height="83dp"
+            android:background="@drawable/amarillo"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center"
+            android:text="Constructoras             "
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_flipper"
+            app:layout_constraintVertical_bias="0.109" />
+
+        <TextView
+            android:id="@+id/tareas"
+            android:layout_width="340dp"
+            android:layout_height="83dp"
+            android:background="@drawable/amarillo"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center"
+            android:text="Tareas                         "
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constructora"
+            app:layout_constraintVertical_bias="0.06" />
+
+        <TextView
+            android:id="@+id/Mapa"
+            android:layout_width="340dp"
+            android:layout_height="83dp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:text="Mapa"
+            android:background="@drawable/amarillo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tareas"
+            app:layout_constraintVertical_bias="0.10" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -62,72 +106,6 @@
             app:layout_constraintTop_toTopOf="@+id/tareas"
             app:layout_constraintVertical_bias="0.473"
             app:srcCompat="@drawable/tarea" />
-
-
-        <TextView
-            android:id="@+id/Mapa"
-            android:layout_width="340dp"
-            android:layout_height="83dp"
-            android:background="@drawable/amarillo"
-            android:fontFamily="@font/comfortaa_bold"
-            android:gravity="center"
-            android:text="Mapa"
-            android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tareas"
-            app:layout_constraintVertical_bias="0.10" />
-
-    /*<TextView
-        android:id="@+id/mapa"
-        android:layout_width="340dp"
-        android:layout_height="83dp"
-        android:fontFamily="@font/comfortaa_bold"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:text="Mapa"
-        android:background="@drawable/amarillo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tareas"
-        app:layout_constraintVertical_bias="0.10" />
-  */
-
-        <TextView
-            android:id="@+id/constructora"
-            android:layout_width="340dp"
-            android:layout_height="83dp"
-            android:background="@drawable/amarillo"
-            android:fontFamily="@font/comfortaa_bold"
-            android:gravity="center"
-            android:text="Constructoras             "
-            android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.36" />
-
-        <TextView
-            android:id="@+id/tareas"
-            android:layout_width="340dp"
-            android:layout_height="83dp"
-            android:background="@drawable/amarillo"
-            android:fontFamily="@font/comfortaa_bold"
-            android:gravity="center"
-            android:text="Tareas                         "
-            android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constructora"
-            app:layout_constraintVertical_bias="0.06" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
