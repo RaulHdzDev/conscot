@@ -1,97 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#3C3F41"
 
-    <TextView
-        android:id="@+id/text_slideshow"
+    >
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
 
 
-    <TextView
-        android:layout_width="294dp"
-        android:layout_height="33dp"
-
-        android:fontFamily="@font/comfortaa_bold"
-        android:text=" Crear Nueva nota:"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
-
-    <EditText
-        android:id="@+id/nombreNota"
-        android:layout_width="361dp"
-        android:layout_height="54dp"
-        android:background="@drawable/transtarea"
-        android:gravity="center"
-        android:hint="Nombre de la nota                                               "
-        android:textAlignment="center"
-        android:textColorHint="#000"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_slideshow"
-        app:layout_constraintVertical_bias="0.204" />
-
-    <EditText
-        android:id="@+id/tipoNota"
-        android:layout_width="361dp"
-        android:layout_height="54dp"
-        android:background="@drawable/transtarea"
-        android:gravity="center"
-        android:hint="Tipo de nota                                                           "
-        android:textAlignment="center"
-        android:textColorHint="#000"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_slideshow"
-        app:layout_constraintVertical_bias="0.33" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text=" Crear Nueva Nota:"
+            android:textSize="22dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="#3C3F41"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.106" />
 
 
-    <EditText
-        android:id="@+id/mensajeNota"
-        android:layout_width="361dp"
-        android:layout_height="343dp"
-        android:background="@drawable/transtarea"
-        android:hint="Escribir nota"
-        android:padding="15dp"
-        android:textAlignment="viewStart"
-        android:textColorHint="#000"
-        android:textSize="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_slideshow"
-        app:layout_constraintVertical_bias="0.8" />
 
-    <Button
-        android:id="@+id/guardar"
-        android:layout_width="148dp"
-        android:layout_height="48dp"
-        android:text="Guardar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensajeNota" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+
+    </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E5F1FB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de nota."
+                android:textColor="#3C3F41"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/comfortaa_light"
+                />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_nota"
+                        />
+                    <EditText
+                        android:id="@+id/nombreNota"
+                        android:layout_marginStart="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:textSize="13dp"
+                        android:hint="Nota:"
+                        android:textColor="#201F1E"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E5F1FB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de nota."
+                    android:textColor="#3C3F41"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/comfortaa_light"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_tipo"
+                        />
+                    <EditText
+                        android:id="@+id/tipoNota"
+                        android:layout_marginStart="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:textSize="13dp"
+                        android:hint="Tipo:"
+                        android:textColor="#201F1E"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#E5F1FB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descripción."
+                    android:textColor="#3C3F41"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/comfortaa_light"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill_vertical"
+                        android:src="@drawable/img_details"
+                        />
+                    <EditText
+                        android:id="@+id/mensajeNota"
+                        android:layout_marginStart="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa_bold"
+                        android:maxLines="10"
+                        android:textSize="13dp"
+                        android:hint="Detalles:"
+                        android:textColor="#201F1E"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+                <Button
+                    android:id="@+id/guardar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guardar"
+                    android:background="@drawable/bg_boton_animation"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginEnd="60dp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+            </FrameLayout>
+
+    </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

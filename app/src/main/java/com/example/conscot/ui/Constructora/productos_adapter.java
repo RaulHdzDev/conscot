@@ -7,6 +7,8 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,7 +56,7 @@ public class productos_adapter extends RecyclerView.Adapter<productos_adapter.Ta
                         .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if (Integer.parseInt(Cantidad.getText().toString())!=0) {
+                                if (!Cantidad.getText().toString().equals("")) {
                                     productos_fragment.productos_seleccionados.add(new descripcio_productos_dialog(lista_productos.get(position).getPrecio()
                                             , lista_productos.get(position).getCaracteristicas(), Integer.parseInt(Cantidad.getText().toString())));
                                     Toast.makeText(build.getContext(), "Se añadio", Toast.LENGTH_LONG
@@ -84,6 +86,12 @@ public class productos_adapter extends RecyclerView.Adapter<productos_adapter.Ta
     public int getItemCount() {
         return lista_productos.size();
     }
+
+    public void filterList(ArrayList<descripcio_productos> lista_filtrada) {
+        lista_productos=lista_filtrada;
+        notifyDataSetChanged();
+    }
+
 
     public class TareasViewHolder extends RecyclerView.ViewHolder {
         TextView Descripcion, precio;

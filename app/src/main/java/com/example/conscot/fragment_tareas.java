@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.conscot.Utilities.Conexion;
+import com.example.conscot.Utilities.SaveSharedPreference;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -47,7 +48,7 @@ public class fragment_tareas extends Fragment {
     private Connection conexion = null;
 
     public void insercion(){
-
+String user;
         GregorianCalendar fechaactual = new GregorianCalendar();
 
         int dia, mes, año;
@@ -60,10 +61,10 @@ public class fragment_tareas extends Fragment {
 
         if(nombre.getText()!=null || tipo.getText() != null || mensaje.getText() != null){
 
+//
+user = SaveSharedPreference.getUserId(getContext());
 
-
-
-            String consulta = "INSERT INTO Tareas_usuarios (id_Usuario, Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea, Fecha) values ( "+usersid+", '"+nombre.getText()+"', '"+tipo.getText()+"', '"+mensaje.getText()+"','"+fecha+"')";
+            String consulta = "INSERT INTO Tareas_usuarios (id_Usuario, Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea, Fecha) values ( "+user+", '"+nombre.getText()+"', '"+tipo.getText()+"', '"+mensaje.getText()+"','"+fecha+"')";
 
             try {
 

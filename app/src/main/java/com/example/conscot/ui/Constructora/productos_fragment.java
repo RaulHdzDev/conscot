@@ -1,9 +1,12 @@
 package com.example.conscot.ui.Constructora;
-
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +21,7 @@ import com.example.conscot.R;
 import com.example.conscot.Utilities.Conexion;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -27,18 +31,21 @@ public class productos_fragment extends Fragment {
 
     //Variable estática en la que se va a guardar el valor de la categoría que se seleccionó en el
     //fragment anterior
+    productos_adapter adapter;
     static ArrayList<descripcio_productos_dialog> productos_seleccionados=new ArrayList<>();
     public static String categoriaSeleccionada = null;
     public static String Constructora_seleccionada=null;
     static FloatingActionButton Conscot;
     private Connection conexion;
+    RecyclerView lista_productos;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_cat_product, container, false);
         conexion=new Conexion().conexion();
-        final RecyclerView lista_productos = root.findViewById(R.id.Lista_productos);
-        //Regresa a categorias
 
+        lista_productos = root.findViewById(R.id.Lista_productos);
+        //Regresa a categorias
         TextView regresar=root.findViewById(R.id.Regresar_a_categorias);
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,9 +73,40 @@ public class productos_fragment extends Fragment {
         });
         lista_productos.setLayoutManager(new LinearLayoutManager(getContext()));
         //mandando datos al recycler view
-        lista_productos.setAdapter(new productos_adapter(obtenerProdcutosBD()));
+        adapter = new productos_adapter(obtenerProdcutosBD());
+        lista_productos.setAdapter(adapter);
+        EditText buscar = root.findViewById(R.id.Buscar);
+        buscar.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filtrar(s.toString());
+            }
+        });
         return root;
     }
+
+    private void filtrar(String filter){
+        ArrayList<descripcio_productos> todos = obtenerProdcutosBD();
+        ArrayList<descripcio_productos> filtrados = new ArrayList<descripcio_productos>();
+
+        for(descripcio_productos item : todos){
+            if (item.getCaracteristicas().toLowerCase().startsWith(filter.toLowerCase()))
+                filtrados.add(item);
+        }
+        adapter.filterList(filtrados);
+
+    }
+
     //Metodo para obtener los productos de la bd
     private ArrayList<descripcio_productos> obtenerProdcutosBD(){
         ArrayList<descripcio_productos>lista= new ArrayList<>();
