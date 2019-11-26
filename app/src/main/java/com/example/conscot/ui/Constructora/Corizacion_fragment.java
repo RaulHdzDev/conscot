@@ -27,7 +27,7 @@ public class Corizacion_fragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_cotizacion, container, false);
         final RecyclerView  recyclerView = v.findViewById(R.id.productos_cotizados);
         Button Cotizar= v.findViewById(R.id.Cotizar);
-        final double[] total_cot = {0};
+
         TextView regresar = v.findViewById(R.id.Regresar_a_productos);
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,12 +48,7 @@ public class Corizacion_fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(!click){
-                    for (Double t:productos_cotizados_adapter.total
-                    ) {
-                        total_cot[0]+=t;
-                    }
-                    total.setText("$"+String.valueOf(total_cot[0]));
-                    total_cot[0]=0;
+                    total.setText("$"+String.valueOf(productos_cotizados_adapter.total));
                     click=false;
                 }
             }
@@ -66,7 +61,7 @@ public class Corizacion_fragment extends Fragment {
                 productos_fragment.productos_seleccionados.clear();
                 recyclerView.setAdapter(new productos_cotizados_adapter(productos_fragment.productos_seleccionados));
                 productos_cotizados_adapter.Lista_precio.clear();
-                productos_cotizados_adapter.total.clear();
+                productos_cotizados_adapter.total=0.0;
                 productos_cotizados_adapter.Lista_precio.clear();
                 click=true;
                 total.setText("$0.0");
