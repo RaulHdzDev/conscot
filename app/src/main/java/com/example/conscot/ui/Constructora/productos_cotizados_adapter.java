@@ -5,11 +5,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,6 +35,7 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
         holder.Descripcion.setText(lista_productos.get(position).getCaracteristicas());
         double precio=Double.parseDouble(lista_productos.get(position).getPrecio())*lista_productos.get(position).getCantidad();
         holder.precio.setText("$"+precio);
+        holder.Cantidad.setText(lista_productos.get(position).getCantidad()+"");
         holder.Constructora.setText(productos_fragment.Constructora_seleccionada);
         Lista_precio.add(precio);
         total.add(precio);
@@ -72,10 +71,11 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
     }
 
     public class TareasViewHolder extends RecyclerView.ViewHolder {
-        TextView Descripcion, precio,Constructora;
+        TextView Descripcion, precio,Constructora,Cantidad;
 
         public TareasViewHolder(@NonNull View itemView) {
             super(itemView);
+            Cantidad=itemView.findViewById(R.id.cantida_c);
             Descripcion = itemView.findViewById(R.id.descripcion_c);
             precio = itemView.findViewById(R.id.precio_c);
             Constructora=itemView.findViewById(R.id.constructora_c);

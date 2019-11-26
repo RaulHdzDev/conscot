@@ -25,9 +25,11 @@ import java.util.zip.Inflater;
 
 public class productos_adapter extends RecyclerView.Adapter<productos_adapter.TareasViewHolder> {
     ArrayList<descripcio_productos> lista_productos;
+    ArrayList<descripcio_productos> lista_productos_full;
 
     public productos_adapter(ArrayList<descripcio_productos> listaProductos) {
         this.lista_productos = listaProductos;
+        lista_productos_full= new ArrayList<>(listaProductos);
     }
 
     @Override
