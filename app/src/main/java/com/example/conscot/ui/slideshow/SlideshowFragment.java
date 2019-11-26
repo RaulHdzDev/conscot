@@ -14,11 +14,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
 import com.example.conscot.Utilities.Conexion;
+import com.example.conscot.Utilities.SaveSharedPreference;
 import com.example.conscot.tareas_components.tareas_adapter;
 import com.example.conscot.tareas_components.tareas_datos_rv;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class SlideshowFragment extends Fragment {
 
         listaTareas=new ArrayList<>();
 
-        readUserId();
+
         llenarlista();
 
         //listaTareas.add(new tareas_datos_rv("jose","medellin","lala"));
@@ -59,28 +59,14 @@ public class SlideshowFragment extends Fragment {
     }
 
 
-    public void readUserId(){
-        try
-        {
-            BufferedReader fin =
-                    new BufferedReader(
-                            new InputStreamReader(
-                                    getContext().openFileInput("usuario.txt")));
-            iduser=(fin.readLine()).trim();
-            Toast.makeText(getContext(), iduser, Toast.LENGTH_SHORT).show();
-            fin.close();
-        }
-        catch (Exception ex)
-        {
-            Log.e("Ficheros", "Error al leer fichero desde memoria interna");
-        }
 
-
-    }
 
 
     private void llenarlista() {
         try {
+
+            iduser = SaveSharedPreference.getUserId(getContext());
+
 
             String SQL = "SELECT Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea FROM Tareas_usuarios WHERE id_Usuario='"+iduser+"';";
 
@@ -96,7 +82,7 @@ public class SlideshowFragment extends Fragment {
             rs.close();
             st.close();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
 
     }
