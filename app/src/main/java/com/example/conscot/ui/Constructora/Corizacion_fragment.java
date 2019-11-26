@@ -20,14 +20,14 @@ import com.example.conscot.R;
 import java.util.ArrayList;
 
 public class Corizacion_fragment extends Fragment {
+    boolean click=false;
     @Nullable
     @Override
-
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_cotizacion, container, false);
         final RecyclerView  recyclerView = v.findViewById(R.id.productos_cotizados);
         Button Cotizar= v.findViewById(R.id.Cotizar);
-
+        final double[] total_cot = {0};
         TextView regresar = v.findViewById(R.id.Regresar_a_productos);
         regresar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,17 +42,21 @@ public class Corizacion_fragment extends Fragment {
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         final TextView total = v.findViewById(R.id.total_cotizacion);
-        recyclerView.setAdapter(new productos_cotizados_adapter(productos_fragment.productos_seleccionados));
+        productos_cotizados_adapter adapter = new productos_cotizados_adapter(productos_fragment.productos_seleccionados);
+        recyclerView.setAdapter(adapter);
 
         Cotizar.setOnClickListener(new View.OnClickListener() {
-            double total_cot=0;
             @Override
             public void onClick(View v) {
-
-                for (Double total:productos_cotizados_adapter.Lista_precio) {
-                    total_cot+=total;
+                if(!click){
+                    for (Double t:productos_cotizados_adapter.total
+                    ) {
+                        total_cot[0]+=t;
+                    }
+                    total.setText("$"+String.valueOf(total_cot[0]));
+                    total_cot[0]=0;
+                    click=false;
                 }
-                total.setText("$"+String.valueOf(total_cot));
             }
         });
 
@@ -63,6 +67,9 @@ public class Corizacion_fragment extends Fragment {
                 productos_fragment.productos_seleccionados.clear();
                 recyclerView.setAdapter(new productos_cotizados_adapter(productos_fragment.productos_seleccionados));
                 productos_cotizados_adapter.Lista_precio.clear();
+                productos_cotizados_adapter.total.clear();
+                productos_cotizados_adapter.Lista_precio.clear();
+                click=true;
                 total.setText("$0.0");
             }
         });
@@ -70,5 +77,6 @@ public class Corizacion_fragment extends Fragment {
 
         return v;
     }
+
 }
 

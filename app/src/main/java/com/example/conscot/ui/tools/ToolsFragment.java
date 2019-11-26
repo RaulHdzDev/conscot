@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,7 +30,7 @@ public class ToolsFragment extends Fragment {
         FrameLayout martinez = root.findViewById(R.id.Martinez_bt);
         FrameLayout la_brocha = root.findViewById(R.id.Brocha_bt);
         FrameLayout dimarsa = root.findViewById(R.id.Dimarsa_bt);
-        FloatingActionButton mapa = root.findViewById(R.id.Mapa);
+        FloatingActionButton mapa = root.findViewById(R.id.mapa);
         //Regresar a home
         TextView regresar = root.findViewById(R.id.Regresar_a_home);
         regresar.setOnClickListener(new View.OnClickListener() {

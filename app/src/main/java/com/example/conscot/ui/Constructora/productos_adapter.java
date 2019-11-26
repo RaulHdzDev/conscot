@@ -54,7 +54,7 @@ public class productos_adapter extends RecyclerView.Adapter<productos_adapter.Ta
                         .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                if (Integer.parseInt(Cantidad.getText().toString())!=0) {
+                                if (!Cantidad.getText().toString().equals("")) {
                                     productos_fragment.productos_seleccionados.add(new descripcio_productos_dialog(lista_productos.get(position).getPrecio()
                                             , lista_productos.get(position).getCaracteristicas(), Integer.parseInt(Cantidad.getText().toString())));
                                     Toast.makeText(build.getContext(), "Se añadio", Toast.LENGTH_LONG
