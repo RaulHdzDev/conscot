@@ -63,7 +63,7 @@ String user;
 
         if(nombre.getText()!=null || tipo.getText() != null || mensaje.getText() != null){
 
-//
+
 user = SaveSharedPreference.getUserId(getContext());
 
             String consulta = "INSERT INTO Tareas_usuarios (id_Usuario, Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea, Fecha) values ( "+user+", '"+nombre.getText()+"', '"+tipo.getText()+"', '"+mensaje.getText()+"','"+fecha+"')";
