@@ -35,10 +35,11 @@
         app:layout_constraintVertical_bias="0.106" />
 
     <EditText
-        android:gravity="center"
+        android:id="@+id/nombreNota"
         android:layout_width="361dp"
         android:layout_height="54dp"
         android:background="@drawable/transtarea"
+        android:gravity="center"
         android:hint="Nombre de la nota                                               "
         android:textAlignment="center"
         android:textColorHint="#000"
@@ -50,10 +51,11 @@
         app:layout_constraintVertical_bias="0.204" />
 
     <EditText
-        android:gravity="center"
+        android:id="@+id/tipoNota"
         android:layout_width="361dp"
         android:layout_height="54dp"
         android:background="@drawable/transtarea"
+        android:gravity="center"
         android:hint="Tipo de nota                                                           "
         android:textAlignment="center"
         android:textColorHint="#000"
@@ -66,7 +68,7 @@
 
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/mensajeNota"
         android:layout_width="361dp"
         android:layout_height="343dp"
         android:background="@drawable/transtarea"
@@ -89,7 +91,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/mensajeNota" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
