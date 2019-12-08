@@ -28,7 +28,7 @@ public class tustareasFragment extends Fragment {
 
 
         listaTareas=new ArrayList<>();
-        listaTareas.add(new tareas_datos_rv("jose","medellin","lala"));
+
         recyclertareas= (RecyclerView) vista.findViewById(R.id.recycler);
         recyclertareas.setLayoutManager(new LinearLayoutManager(getContext()));
 
