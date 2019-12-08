@@ -3,9 +3,6 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="#ffff">
 
-
-
-
         <FrameLayout
             android:id="@+id/card"
             android:layout_width="match_parent"
@@ -14,19 +11,99 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/tarjeta_tarea">
+
+
+            <RelativeLayout
+                android:id="@+id/eliminar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/tarjeta_tarea_del"
+                >
+
+                <ImageView
+                    android:id="@+id/img_deleted"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/img_delete"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/img_deleted"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/white"
+                    android:text="ELIMINAR"
+                    android:fontFamily="@font/comfortaa_bold"
+
+                    />
+
+
+            </RelativeLayout>
+
+
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/tarjeta_tarea"
+                >
+
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
+
+
+
+
+
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp">
+
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_fecha"
+                            android:text="lunes, 22 de diciembre del 2019"
+                            android:layout_marginEnd="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/img_calendar"
+                            android:layout_gravity="center_vertical"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -133,6 +210,8 @@
 
 
                 </FrameLayout>
+
+
             </LinearLayout>
 
             </ScrollView>

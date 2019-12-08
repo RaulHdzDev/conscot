@@ -58,7 +58,7 @@
             android:background="@drawable/amarillo"
             android:fontFamily="@font/comfortaa_bold"
             android:gravity="center"
-            android:text="Tareas                         "
+            android:text="Notas                          "
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
