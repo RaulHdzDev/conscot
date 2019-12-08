@@ -159,36 +159,6 @@
 
                                         </FrameLayout>
 
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_margin="10dp">
-
-                                            <LinearLayout
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-
-                                                <Button
-                                                    android:id="@+id/Acabados_bt"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:background="@drawable/img_acabados" />
-
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:fontFamily="@font/comfortaa"
-                                                    android:text="Acabados"
-                                                    android:textAlignment="center"
-                                                    android:textColor="#929292"
-                                                    android:textSize="15dp" />
-
-                                            </LinearLayout>
-
-
-                                        </FrameLayout>
-
 
                                     </LinearLayout>
 
@@ -199,42 +169,51 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_marginTop="25dp">
-
                                     <LinearLayout
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
                                         android:orientation="horizontal">
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_margin="10dp">
+                                            android:layout_gravity="center"
+                                            android:orientation="horizontal">
 
-                                            <LinearLayout
+                                            <FrameLayout
                                                 android:layout_width="match_parent"
                                                 android:layout_height="wrap_content"
-                                                android:orientation="vertical">
+                                                android:layout_margin="10dp">
 
-                                                <Button
-                                                    android:id="@+id/Plomeria_bt"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:background="@drawable/img_plomeria" />
-
-                                                <TextView
+                                                <LinearLayout
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
-                                                    android:fontFamily="@font/comfortaa"
-                                                    android:text="Plomeria"
-                                                    android:textAlignment="center"
-                                                    android:textColor="#929292"
-                                                    android:textSize="15dp" />
+                                                    android:orientation="vertical">
 
-                                            </LinearLayout>
+                                                    <Button
+                                                        android:id="@+id/btOtros"
+                                                        android:layout_width="90dp"
+                                                        android:layout_height="90dp"
+                                                        android:background="@drawable/img_construction" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:fontFamily="@font/comfortaa"
+                                                        android:text="Otros"
+                                                        android:textAlignment="center"
+                                                        android:textColor="#929292"
+                                                        android:textSize="15dp" />
+
+                                                </LinearLayout>
 
 
-                                        </FrameLayout>
+                                            </FrameLayout>
+
+
+                                        </LinearLayout>
+
+
 
                                         <FrameLayout
                                             android:layout_width="match_parent"
@@ -266,89 +245,12 @@
 
                                         </FrameLayout>
 
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_margin="10dp">
-
-                                            <LinearLayout
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-
-                                                <Button
-                                                    android:id="@+id/Electricos_bt"
-                                                    android:layout_width="wrap_content"
-                                                    android:layout_height="wrap_content"
-                                                    android:background="@drawable/img_elect" />
-
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:fontFamily="@font/comfortaa"
-                                                    android:text="Eléctrico"
-                                                    android:textAlignment="center"
-                                                    android:textColor="#929292"
-                                                    android:textSize="15dp" />
-
-                                            </LinearLayout>
-
-
-                                        </FrameLayout>
-
 
                                     </LinearLayout>
 
 
                                 </FrameLayout>
 
-                                <FrameLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginTop="25dp"
-                                    android:layout_marginBottom="35dp">
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
-
-                                        <FrameLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_margin="10dp">
-
-                                            <LinearLayout
-                                                android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:orientation="vertical">
-
-                                                <Button
-                                                    android:id="@+id/btOtros"
-                                                    android:layout_width="90dp"
-                                                    android:layout_height="90dp"
-                                                    android:background="@drawable/img_construction" />
-
-                                                <TextView
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:fontFamily="@font/comfortaa"
-                                                    android:text="Otros"
-                                                    android:textAlignment="center"
-                                                    android:textColor="#929292"
-                                                    android:textSize="15dp" />
-
-                                            </LinearLayout>
-
-
-                                        </FrameLayout>
-
-
-                                    </LinearLayout>
-
-
-                                </FrameLayout>
 
 
                             </LinearLayout>
