@@ -132,39 +132,6 @@
         android:onClick="registrarme"
         />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:background="#50151515"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.999" />
-
-
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/gmail_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.601"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/face"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/o"
@@ -175,25 +142,8 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registrate"
-        app:layout_constraintVertical_bias="0.111" />
-
-    <TextView
-        android:id="@+id/emp"
-        android:layout_width="221dp"
-        android:layout_height="27dp"
-        android:fontFamily="@font/comfortaa_bold"
-        android:text="Inicia sesión con"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/o"
-        app:layout_constraintVertical_bias="0.600" />
+        app:layout_constraintTop_toBottomOf="@+id/registrate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

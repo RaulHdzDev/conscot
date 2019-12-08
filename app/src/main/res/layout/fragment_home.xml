@@ -58,7 +58,7 @@
             android:background="@drawable/amarillo"
             android:fontFamily="@font/comfortaa_bold"
             android:gravity="center"
-            android:text="Tareas                         "
+            android:text="Notas                          "
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,17 +71,17 @@
             android:id="@+id/Mapa"
             android:layout_width="340dp"
             android:layout_height="83dp"
+            android:background="@drawable/amarillo"
             android:fontFamily="@font/comfortaa_bold"
             android:gravity="center"
+            android:text="Mapa                         "
             android:textSize="25dp"
-            android:text="Mapa"
-            android:background="@drawable/amarillo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tareas"
-            app:layout_constraintVertical_bias="0.10" />
+            app:layout_constraintVertical_bias="0.06" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -106,6 +106,17 @@
             app:layout_constraintTop_toTopOf="@+id/tareas"
             app:layout_constraintVertical_bias="0.473"
             app:srcCompat="@drawable/tarea" />
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="55dp"
+            android:layout_height="62dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Mapa"
+            app:layout_constraintEnd_toEndOf="@+id/Mapa"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="@+id/Mapa"
+            app:layout_constraintTop_toTopOf="@+id/Mapa"
+            app:layout_constraintVertical_bias="0.473"
+            app:srcCompat="@drawable/img_map" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

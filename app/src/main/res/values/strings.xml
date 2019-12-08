@@ -12,14 +12,14 @@
     <string name="fb_login_protocol_scheme">fb405668993709939</string>
 
     <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Tus Tareas</string>
+    <string name="menu_slideshow">Tus Notas</string>
     <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Acerca de</string>
     <string name="menu_send">Send</string>
 
-    <string name="home">Home</string>
+    <string name="home">Inicio</string>
     <string name="planos">Planos</string>
-    <string name="tarea">Tus tareas</string>
+    <string name="tarea">Tus Notas</string>
     <string name="acerca">Acerca de </string>
     <string name="cerrar">Cerrar sesión</string>
 
@@ -27,7 +27,7 @@
     <string name="correo">Aquí va el correo</string>
 
     <string name="constructoras">Constructoras</string>
-    <string name="tareas">Tareas</string>
+    <string name="tareas">Notas</string>
     <string name="planosd">Planos 2D</string>
 
     <!-- TODO: Remove or change this placeholder text -->

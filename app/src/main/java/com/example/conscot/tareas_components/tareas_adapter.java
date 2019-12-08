@@ -3,6 +3,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,7 @@ public class tareas_adapter extends RecyclerView.Adapter<tareas_adapter.TareasVi
         holder.txtNombre.setText(listaTarea.get(position).getNom());
         holder.txtInformacion.setText(listaTarea.get(position).getDesc());
         holder.txtTipo.setText(listaTarea.get(position).getTipo());
+        holder.txtFecha.setText(listaTarea.get(position).getFecha());
     }
 
 
@@ -45,16 +47,25 @@ public class tareas_adapter extends RecyclerView.Adapter<tareas_adapter.TareasVi
     }
 
     public class TareasViewHolder extends RecyclerView.ViewHolder {
-        TextView txtNombre,txtInformacion,txtTipo;
+        TextView txtNombre,txtInformacion,txtTipo, txtFecha;
+
+        public RelativeLayout del;
 
         public TareasViewHolder(@NonNull View itemView) {
             super(itemView);
             txtNombre= (TextView) itemView.findViewById(R.id.txt_nom);
             txtInformacion= (TextView) itemView.findViewById(R.id.txt_desc);
             txtTipo= (TextView) itemView.findViewById(R.id.txt_tipo);
+            txtFecha = (TextView) itemView.findViewById(R.id.txt_fecha);
+            del = (RelativeLayout) itemView.findViewById(R.id.eliminar);
         }
-
-
-
     }
+
+    /*ELIMINAR*/
+    public void remover(int position){
+
+        listaTarea.remove(position);
+        notifyItemRemoved(position);
+    }
+
 }
