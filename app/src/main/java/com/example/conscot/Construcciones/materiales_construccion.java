@@ -20,6 +20,7 @@ public class materiales_construccion extends AppCompatActivity {
         setContentView(R.layout.activity_materiales_construccion);
         ViewPager viewPager = findViewById(R.id.ViewPager);
         LoadViewPager(viewPager);
+
         tab = findViewById(R.id.Tab);
         tab.setupWithViewPager(viewPager);
         TabTitles();
