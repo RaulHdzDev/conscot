@@ -85,7 +85,7 @@ public class fragment_tareas extends Fragment {
  user  = SaveSharedPreference.getUserId(getContext());
 
 
-            String consulta = "INSERT INTO Tareas_usuarios (id_Usuario, Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea, Fecha) values ( "+user+", '"+nombre.getText()+"', '"+tipo.getText()+"', '"+mensaje.getText()+"','"+fecha+"')";
+            String consulta = "INSERT INTO Notas_usuarios (id_Usuario, Nombre_de_la_tarea, Tipo_de_tarea, Descripcion_de_la_tarea, fecha_creacion) values ( "+user+", '"+nombre.getText()+"', '"+tipo.getText()+"', '"+mensaje.getText()+"','"+fecha+"')";
 
             try {
 
@@ -103,6 +103,9 @@ public class fragment_tareas extends Fragment {
                 Toast.makeText(getContext() , e.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
+            nombre.setText("");
+            tipo.setText("");
+            mensaje.setText("");
 
         }else{
             Toast.makeText(this.getContext(), "Rellene todos los campos", Toast.LENGTH_SHORT).show();

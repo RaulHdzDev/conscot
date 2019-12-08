@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.conscot.Fragments_constructoras.Construrama;
+import com.example.conscot.Fragments_constructoras.Cotizacion;
 import com.example.conscot.Fragments_constructoras.Dimarsa;
 import com.example.conscot.Fragments_constructoras.Martinez;
 import com.example.conscot.R;
@@ -13,7 +14,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class materiales_construccion extends AppCompatActivity {
     private TabLayout tab;
-    private String titles[]={"Construrama","Martinez","Dimarsa"};
+    private String titles[]={"Construrama","Martinez","Dimarsa","Cotización"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,11 +31,12 @@ public class materiales_construccion extends AppCompatActivity {
         adapter.addFragment(new Construrama());
         adapter.addFragment(new Martinez());
         adapter.addFragment(new Dimarsa());
+        adapter.addFragment(new Cotizacion());
         viewPager.setAdapter(adapter);
 
     }
     private void TabTitles() {
-        for (int i = 0; i<3; i++) {
+        for (int i = 0; i<4; i++) {
             tab.getTabAt(i).setText(titles[i]);
         }
 

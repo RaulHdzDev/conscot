@@ -26,8 +26,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class SlideshowFragment extends Fragment implements RecyclerItemTouchHelper.RecyclerItemTouchHelperListener {
-
-    private SlideshowViewModel slideshowViewModel;
     public RecyclerView recyclertareas;
     public ArrayList<tareas_datos_rv> listaTareas;
     private tareas_adapter adapter;
@@ -35,8 +33,6 @@ public class SlideshowFragment extends Fragment implements RecyclerItemTouchHelp
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
 
         View  vista = inflater.inflate(R.layout.fragment_tustareas, container, false);
 

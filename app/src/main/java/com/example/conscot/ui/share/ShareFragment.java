@@ -19,7 +19,6 @@ import com.example.conscot.mapas;
 
 public class ShareFragment extends Fragment {
 
-    private ShareViewModel shareViewModel;
 
     TextView creditos;
 
