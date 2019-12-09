@@ -27,6 +27,7 @@ import java.util.GregorianCalendar;
 
 public class fragment_tareas extends Fragment {
     EditText nombre, tipo, mensaje;
+    String n,t,m;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -53,6 +54,9 @@ public class fragment_tareas extends Fragment {
             @Override
             public void onClick(View v) {
                 insercion();
+                n ="";
+                t="";
+                m="";
             }
         });
 
@@ -66,9 +70,9 @@ public class fragment_tareas extends Fragment {
     public void insercion(){
 
 
-        String n = nombre.getText().toString();
-        String t = tipo.getText().toString();
-        String m = mensaje.getText().toString();
+        n = nombre.getText().toString();
+        t = tipo.getText().toString();
+        m = mensaje.getText().toString();
         String user;
         GregorianCalendar fechaactual = new GregorianCalendar();
 
@@ -104,6 +108,7 @@ public class fragment_tareas extends Fragment {
 
             }
             nombre.setText("");
+
             tipo.setText("");
             mensaje.setText("");
 
