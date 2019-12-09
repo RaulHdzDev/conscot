@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.conscot.Construcciones.construccion;
 import com.example.conscot.R;
 import com.example.conscot.fragment_tareas;
 
@@ -76,6 +77,19 @@ public class HomeFragment extends Fragment {
                 ToolsFragment fragment = new ToolsFragment();
                 fragmentTransaction.replace(R.id.container_home, fragment);
 
+                fragmentTransaction.commit();
+            }
+        });
+        //Click para abrir las construcciones
+        TextView construye = root.findViewById(R.id.construye);
+        construye.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction =
+                        fragmentManager.beginTransaction();
+                construccion fragment = new construccion();
+                fragmentTransaction.replace(R.id.container_home, fragment);
                 fragmentTransaction.commit();
             }
         });

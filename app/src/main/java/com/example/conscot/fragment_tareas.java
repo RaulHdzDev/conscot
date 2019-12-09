@@ -108,8 +108,9 @@ public class fragment_tareas extends Fragment {
 
             }
             nombre.setText("");
-                    tipo.setText("");
-                    mensaje.setText("");
+
+            tipo.setText("");
+            mensaje.setText("");
 
         }else{
             Toast.makeText(this.getContext(), "Rellene todos los campos", Toast.LENGTH_SHORT).show();

@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -17,17 +16,14 @@ import com.example.conscot.R;
 import com.example.conscot.ui.Constructora.categorias_fragment;
 import com.example.conscot.ui.Constructora.productos_fragment;
 import com.example.conscot.ui.home.HomeFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ToolsFragment extends Fragment {
-
-    private ToolsViewModel toolsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_constructoras, container, false);
         FrameLayout construrama = root.findViewById(R.id.construrama_bt);
-        FrameLayout martinez = root.findViewById(R.id.Martinez_bt);
+        FrameLayout martinez = root.findViewById(R.id.botoPiso);
         //FrameLayout la_brocha = root.findViewById(R.id.Brocha_bt);
         FrameLayout dimarsa = root.findViewById(R.id.Dimarsa_bt);
         //Regresar a home
