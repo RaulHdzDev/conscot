@@ -6,183 +6,215 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".Construcciones.construccion">
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="263dp"
-        android:src="@drawable/circulo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="203dp"
-        android:layout_marginTop="28dp"
-        android:padding="10dp"
-        android:src="@drawable/conscotlogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/comfortaa_bold"
-        android:text="Elige lo que deseas construir"
-        android:textColor="#272727"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <FrameLayout
-        android:id="@+id/botoPiso"
-        android:layout_width="162dp"
-        android:layout_height="146dp"
-        android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        app:layout_constraintVertical_bias="0.739">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn_constructora"
-            android:gravity="center"
-            android:padding="5dp">
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
+            <TextView
+                android:id="@+id/Regresar_a_home"
+                android:layout_width="64dp"
+                android:layout_height="54dp"
+                android:background="@drawable/amarillo"
+                android:foreground="@drawable/ic_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="353dp"
+            android:layout_height="224dp"
+            android:src="@drawable/circulo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="200dp"
+            android:layout_height="203dp"
+            android:layout_marginTop="28dp"
+            android:padding="10dp"
+            android:src="@drawable/conscotlogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="Elige lo que deseas construir"
+            android:textColor="#272727"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <FrameLayout
+            android:id="@+id/botoPiso"
+            android:layout_width="162dp"
+            android:layout_height="146dp"
+            android:layout_marginBottom="224dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintVertical_bias="0.739">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@drawable/piso"
-                android:padding="15dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="390dp" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_constructora"
+                android:gravity="center"
+                android:padding="5dp">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/piso"
+                    android:padding="15dp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="390dp" />
 
-    </FrameLayout>
+            </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/botonloza"
-        android:layout_width="162dp"
-        android:layout_height="146dp"
-        android:layout_marginBottom="220dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.855"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        app:layout_constraintVertical_bias="0.698">
+        </FrameLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn_constructora"
-            android:gravity="center"
-            android:padding="5dp">
+        <FrameLayout
+            android:id="@+id/botonloza"
+            android:layout_width="162dp"
+            android:layout_height="146dp"
+            android:layout_marginBottom="220dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.855"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintVertical_bias="0.698">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@drawable/loza"
-                android:padding="15dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="390dp" />
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_constructora"
+                android:gravity="center"
+                android:padding="5dp">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/loza"
+                    android:padding="15dp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="390dp" />
 
-    </FrameLayout>
+            </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/botonpared"
-        android:layout_width="162dp"
-        android:layout_height="146dp"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botoPiso"
-        app:layout_constraintVertical_bias="0.805">
+        </FrameLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <FrameLayout
+            android:id="@+id/botonpared"
+            android:layout_width="162dp"
+            android:layout_height="146dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/botoPiso"
+            app:layout_constraintVertical_bias="0.805">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_constructora"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="152dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/pared"
+                    android:padding="15dp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="390dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn_constructora"
+            android:fontFamily="@font/comfortaa_bold"
             android:gravity="center"
-            android:padding="5dp">
-
-            <ImageView
-                android:layout_width="152dp"
-                android:layout_height="150dp"
-                android:background="@drawable/pared"
-                android:padding="15dp"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="390dp" />
-
-        </LinearLayout>
-
-    </FrameLayout>
+            android:text="Piso"
+            android:textColor="#252525"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/botoPiso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.261"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintVertical_bias="0.86" />
 
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center"
+            android:text="Pared"
+            android:textColor="#252525"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/botonpared"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/botoPiso" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_bold"
-        android:gravity="center"
-        android:text="Piso"
-        android:textColor="#252525"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/botoPiso"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        app:layout_constraintVertical_bias="0.86" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa_bold"
+            android:gravity="center"
+            android:text="Losa"
+            android:textColor="#252525"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/botoPiso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.735"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintVertical_bias="0.86" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_bold"
-        android:gravity="center"
-        android:text="Pared"
-        android:textColor="#252525"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/botonpared"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botoPiso" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/comfortaa_bold"
-        android:gravity="center"
-        android:text="Loza"
-        android:textColor="#252525"
-        android:textSize="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/botoPiso"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.735"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
-        app:layout_constraintVertical_bias="0.86" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

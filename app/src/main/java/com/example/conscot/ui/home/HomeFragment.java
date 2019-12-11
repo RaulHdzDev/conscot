@@ -19,7 +19,7 @@ import com.example.conscot.R;
 import com.example.conscot.fragment_tareas;
 
 
-import com.example.conscot.mapas;
+import com.example.conscot.mapas2;
 import com.example.conscot.ui.slideshow.SlideshowFragment;
 import com.example.conscot.ui.tools.ToolsFragment;
 
@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getContext(), mapas.class);
+                Intent i = new Intent(v.getContext(), mapas2.class);
                 startActivity(i);
             }
         });
@@ -102,10 +102,10 @@ public class HomeFragment extends Fragment {
         imageView.setBackgroundResource(image);
 
         v_flipper.addView(imageView);
-        v_flipper.setFlipInterval(4000);
+        v_flipper.setFlipInterval(3000);
         v_flipper.setAutoStart(true);
 
         v_flipper.setInAnimation(getContext(), android.R.anim.slide_in_left);
-        v_flipper.setInAnimation(getContext(), android.R.anim.slide_out_right);
+        v_flipper.setOutAnimation(getContext(), android.R.anim.slide_out_right);
     }
 }

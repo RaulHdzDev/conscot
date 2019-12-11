@@ -12,6 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <Button
             android:id="@+id/bt_calcular"
             android:layout_width="195dp"
@@ -36,6 +37,7 @@
             android:background="@drawable/botoncal"
             android:fontFamily="@font/comfortaa"
             android:text="Consultar"
+            android:enabled="false"
             android:textColor="#FFFFFF"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,8 +45,25 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-
+            <TextView
+                android:id="@+id/Regresar_a_construccion"
+                android:layout_width="64dp"
+                android:layout_height="54dp"
+                android:background="@drawable/amarillo"
+                android:foreground="@drawable/ic_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
 
 
 
@@ -52,8 +71,10 @@
             android:id="@+id/imageView10"
             android:layout_width="match_parent"
             android:layout_height="58dp"
+            android:layout_marginTop="56dp"
             android:src="@drawable/rectangulo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,6 +95,8 @@
             android:layout_height="46dp"
             android:digits="0123456789."
             android:ems="10"
+            android:textSize="18sp"
+            android:hint="metros"
             android:inputType="number"
             android:textAlignment="center"
             android:textAllCaps="true"
@@ -101,8 +124,10 @@
             android:layout_width="187dp"
             android:layout_height="43dp"
             android:digits="0123456789."
+            android:hint="metros"
             android:ems="10"
             android:inputType="number"
+            android:textSize="18sp"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
@@ -130,6 +155,8 @@
             android:digits="0123456789."
             android:ems="10"
             android:inputType="number"
+            android:textSize="18sp"
+            android:hint="metros"
             android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/imageView14"
@@ -162,7 +189,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
         <TextView
             android:id="@+id/textView5"
