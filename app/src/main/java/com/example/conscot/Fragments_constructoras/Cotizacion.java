@@ -12,10 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
+import com.example.conscot.Utilities.Conexion;
 import com.example.conscot.ui.Constructora.descripcio_productos_dialog;
 import com.example.conscot.ui.Constructora.productos_cotizados_adapter;
 import com.example.conscot.ui.Constructora.productos_fragment;
 
+import java.sql.Connection;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class Cotizacion extends Fragment {
@@ -53,6 +56,37 @@ public class Cotizacion extends Fragment {
                 if(!click){
                     total.setText("$"+String.valueOf(productos_construccion_cotizados_adapter.total));
                     click=false;
+                    String consulta;
+                    String idConst;
+                    for(productos_constructoras_dialog producto : Cotizacion.productos_seleccionados){
+
+                        switch (producto.Constructora){
+                            case "Construrama":
+                                idConst = "1";
+                                break;
+                            case "Martinez":
+                                idConst = "2";
+                                break;
+                            case "Dimarsa":
+                                idConst = "4";
+                                break;
+                            default:
+                                idConst = "3";
+                                break;
+                        }
+
+                        consulta = "INSERT INTO Cotizaciones\n" +
+                                "SELECT id_producto, id_Constructora, GETDATE() as f FROM Productos\n" +
+                                "WHERE id_Constructora = "+idConst+" AND Producto = '"+producto.caracteristicas+"';";
+
+                        try {
+                            Connection conn = new Conexion().conexion();
+                            Statement st = conn.createStatement();
+                            st.executeUpdate(consulta);
+                        } catch (Exception e){
+                        }
+
+                    }
                 }
             }
         });
