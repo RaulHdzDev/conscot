@@ -142,43 +142,6 @@
 
                         </FrameLayout>
 
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="10dp"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/comfortaa"
-                                    android:text="Total:"
-                                    android:textAlignment="center"
-                                    android:textColor="#fff"
-                                    android:textSize="15dp" />
-
-                                <TextView
-                                    android:id="@+id/precio_total"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:fontFamily="@font/comfortaa"
-                                    android:text="-@Total"
-                                    android:textAlignment="textEnd"
-                                    android:textColor="#fff"
-                                    android:textSize="15dp" />
-
-
-                            </LinearLayout>
-
-
-                        </FrameLayout>
                     </LinearLayout>
 
                 </FrameLayout>

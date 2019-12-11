@@ -1,4 +1,4 @@
-package com.example.conscot.ui.Constructora;
+package com.example.conscot.Fragments_constructoras;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,20 +11,23 @@ import android.widget.EditText;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.conscot.R;
+import com.example.conscot.ui.Constructora.descripcio_productos_dialog;
+import com.example.conscot.ui.Constructora.productos_fragment;
 
 import java.util.ArrayList;
 
 
-public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_cotizados_adapter.TareasViewHolder> {
-    ArrayList<descripcio_productos_dialog> lista_productos;
-    static Double total=0.0 ;
+public class productos_construccion_cotizados_adapter extends RecyclerView.Adapter<productos_construccion_cotizados_adapter.TareasViewHolder> {
+    ArrayList<productos_constructoras_dialog> lista_productos;
+    static Double total=0.0;
    static ArrayList<Double> Lista_precio= new ArrayList<>();
    AlertDialog.Builder build;
-    public productos_cotizados_adapter(ArrayList<descripcio_productos_dialog> listaProductos) {
+    public productos_construccion_cotizados_adapter(ArrayList<productos_constructoras_dialog> listaProductos) {
         this.lista_productos = listaProductos;
     }
 
@@ -40,7 +43,7 @@ public class productos_cotizados_adapter extends RecyclerView.Adapter<productos_
         double precio=Double.parseDouble(lista_productos.get(position).getPrecio())*lista_productos.get(position).getCantidad();
         holder.precio.setText("$"+precio);
         holder.Cantidad.setText(lista_productos.get(position).getCantidad()+"");
-        holder.Constructora.setText(productos_fragment.Constructora_seleccionada);
+        holder.Constructora.setText(lista_productos.get(position).getConstructora());
         Lista_precio.add(precio);
         total+=precio;
 

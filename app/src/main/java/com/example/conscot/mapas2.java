@@ -11,14 +11,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class mapas extends FragmentActivity implements OnMapReadyCallback {
+public class mapas2 extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mapas);
+        setContentView(R.layout.activity_mapas2);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -47,9 +47,6 @@ public class mapas extends FragmentActivity implements OnMapReadyCallback {
         LatLng dimarsa = new LatLng(22.733009, -98.964430);
         mMap.addMarker(new MarkerOptions().position(dimarsa).title("Materiales Dimarsa CD MANTE"));
 
-
-        LatLng brocha = new LatLng(22.7578753, -98.9684222);
-        mMap.addMarker(new MarkerOptions().position(brocha).title("Materiales La Brocha CD MANTE"));
 
         LatLng martinez = new LatLng(22.7475647, -98.9985209);
         mMap.addMarker(new MarkerOptions().position(martinez).title("Materiales Martinez CD MANTE"));

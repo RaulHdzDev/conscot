@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.conscot.R;
 import com.example.conscot.acercadeDev;
-import com.example.conscot.mapas;
+import com.example.conscot.mapas2;
 
 public class ShareFragment extends Fragment {
 

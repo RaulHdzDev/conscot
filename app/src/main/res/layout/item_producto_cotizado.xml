@@ -22,7 +22,7 @@
             android:src="@drawable/img_pack"/>
 
         <TextView
-            android:id="@+id/constructora_c"
+            android:id="@+id/constructora_"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"

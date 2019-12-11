@@ -109,7 +109,7 @@
                                 android:layout_height="wrap_content">
 
                                 <androidx.recyclerview.widget.RecyclerView
-                                    android:id="@+id/productos_cotizados"
+                                    android:id="@+id/productos_cotizados_construccion"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent" />
 
@@ -167,7 +167,7 @@
                                     android:textSize="15dp" />
 
                                 <TextView
-                                    android:id="@+id/precio_total"
+                                    android:id="@+id/precio_total_C"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="10dp"
@@ -191,7 +191,7 @@
 
 
                             <Button
-                                android:id="@+id/Cotizar"
+                                android:id="@+id/Cotizar_C"
                                 android:layout_width="160dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/btn_constructora"
@@ -203,7 +203,7 @@
                                 android:layout_height="wrap_content"/>
 
                             <Button
-                                android:id="@+id/Limpiar"
+                                android:id="@+id/Limpiar_C"
                                 android:layout_width="143dp"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/btn_constructora"

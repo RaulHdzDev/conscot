@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/tarjeta_producto"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="4dp"
+        >
+
+        <TextView
+            android:id="@+id/material_p"
+            android:layout_width="60dp"
+            android:layout_marginStart="4dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/actor"
+            android:text="Cemento"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/precio_p"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa_light"
+            android:text="50 kg" />
+    </LinearLayout>
+</FrameLayout>
+</RelativeLayout>
